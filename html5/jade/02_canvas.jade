@@ -1,0 +1,71 @@
+doctype
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Canvas HTML 5
+  body
+    h1 Canvas (HTML 5)
+    hr
+    h2 Cuadrado
+    canvas#cuadrado
+    h2 Rectangulo
+    canvas#rectangulo
+    h2 Circulo
+    canvas#circulo
+    h2 Triangulo
+    canvas#triangulo
+    h2 Corazon
+    canvas#corazon
+    h2 Texto
+    canvas#texto
+    
+    script.
+     var canvas1 = document.getElementById('cuadrado');
+     var ctx1 = canvas1.getContext('2d');
+     ctx1.fillStyle='#f00';
+     ctx1.fillRect(20, 20, 100, 100);
+     //Rectangulo
+     var canvas2 = document.getElementById('rectangulo');
+     var ctx2 = canvas2.getContext('2d');
+     ctx2.fillStyle='#f00';
+     ctx2.fillRect(20, 20, 200, 100);
+     //Circulo
+     var canvas = document.getElementById('circulo');
+     var context = canvas.getContext('2d');
+     var centerX = canvas.width / 2;
+     var centerY = canvas.height / 2;
+     var radius = 60;
+     
+     context.beginPath();
+     context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+     context.fillStyle = '#f00';
+     context.fill();
+     //Triangulo
+     var canvas = document.getElementById("triangulo");
+     var ctx = canvas.getContext("2d");
+     ctx.fillStyle="#f00";
+     ctx.beginPath();
+     ctx.moveTo(100,110);
+     ctx.lineTo(200,10);
+     ctx.lineTo(300,110);
+     ctx.closePath();
+     ctx.fill();
+     //Corazon
+     var canvas = document.getElementById('corazon');
+     var ctx = canvas.getContext('2d');
+     ctx.fillStyle="#f00";
+     ctx.beginPath();
+     ctx.moveTo(75,40);
+     ctx.bezierCurveTo(75,37,70,25,50,25);
+     ctx.bezierCurveTo(20,25,20,62.5,20,62.5);
+     ctx.bezierCurveTo(20,80,40,102,75,120);
+     ctx.bezierCurveTo(110,102,130,80,130,62.5);
+     ctx.bezierCurveTo(130,62.5,130,25,100,25);
+     ctx.bezierCurveTo(85,25,75,37,75,40);
+     ctx.fill();
+     //Texto
+     var canvas = document.getElementById("texto");
+     var ctx = canvas.getContext("2d");
+     ctx.font = "30px Arial";
+     ctx.fillText("Hello Andrea",10,50);
+     

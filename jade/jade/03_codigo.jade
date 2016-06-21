@@ -1,0 +1,17 @@
+doctype
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Código (Jade)
+  body
+    h1 Código (Jade)
+    ul
+      - for (var i = 1; i <= 8; i++)
+        li Club #{i}
+
+    ol
+    
+      -
+        list = ["Milan", "Real Madrid", "Bayern München", "Barcelona", "Borussia Dortmund"]
+      each item in list
+        li= item
