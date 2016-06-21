@@ -2,40 +2,14 @@ doctype
 html(lang="es")
   head
     meta(charset="UTF-8")
-    title Casos
+    title Casos (jade)
   body
-    h1 Juegos personales
-    - var juegos = 10
-    case juegos
+    h1 Casos (jade)
+    - var amigos = 0
+    case amigos
       when 0
-        p No tienes juegos
+        p Usted no tiene amigos
       when 1
-        p Tienes 1 juego
+        p Usted tiene un amigo
       default
-        p Tienes #{juegos} juegos
-    h3 Pocos juegos
-    - var juegos = 0
-    case juegos
-      when 0
-      when 1
-        p Tienes muy pocos juegos novato
-      default
-        p Tiene #{friends} juegos 
-    h3 juegos nivel intermedio
-    - var juegos = 6
-      case juegos
-        when 5
-        when 6
-        when 7
-          p Tienes buenos juegos
-        default
-          p Tienes #{juegos} juegos 
-    h3 Buen # de juegos      
-    - var juegos = 10
-    case juegos
-      when 8
-      when 9
-      when 10
-        p tienes muy buenos juegos Crack!      
-      default
-        p Tienes #{juegos} juegos 
+        p Usted tiene #{amigos} amigos
