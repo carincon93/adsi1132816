@@ -1,0 +1,26 @@
+section {
+  border: 2px solid #999;
+  height: 200px;
+  width: 300px;
+}
+main .box1 {
+  overflow: visible;
+  display: inline-block;
+  vertical-align: top;
+}
+main .box2 {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+}
+main .box3 {
+  overflow: scroll;
+  display: inline-block;
+  vertical-align: top;
+}
+h4 {
+  padding: 10px;
+  background-color: #7f0000;
+  color: #fff;
+  margin: 4px auto;
+}
