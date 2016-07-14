@@ -1,0 +1,79 @@
+body
+	background-color #CF3939
+	color #fff
+	font 16px Arial
+section
+	background-color #F12424
+	border 10px solid #C29696
+	padding 20px
+	margin 20px auto
+	width 800px
+/* Pseudo Clases para Enlaces */
+nav a:link,
+nav a:visited	
+	background-color #C7A7A7
+	border 4px solid #C7A7A7
+	color #EAD6D6
+	display inline-block
+	padding 20px 10px
+	text-align center
+	text-decoration none
+	width 168px
+nav a:hover
+	background-color #fff
+	border 4px solid #DFA9A9
+	color #DFA9A9
+nav a:active
+	background-color #B0A3A3
+	border 4px solid #B0A3A3
+	color #fff
+/* Pseudo Clases para Elementos de Formulario */
+&::-webkit-input-placeholder
+	color white
+input
+	background-color #585353
+	border none
+	color #fff
+	font-size 1.2em
+	display block
+	outline none
+	padding 20px
+	width 96%
+input:focus
+	background-color #EA8787
+	color #A54B4B
+/* Insertar Contenido Antes-Después */	
+div.box::after,
+div.box::before
+	content  ''
+	position absolute
+div.box
+	background-color #D32D2D
+	height 200px
+	position relative
+	top 0px
+	left 0px
+	width 200px
+div.box::after
+	background-color #FFD3D3
+	height 100px
+	top 0px
+	left 100px
+	width 100px
+div.box::before
+	background-color #FFD3D3
+	height 100px
+	top 100px
+	left 0px
+	width 100px
+/* Primera letra - Primera Línea */
+p::first-letter
+	color #9BE2E1
+	font-weight bolder
+	font-size 4em
+p::first-line
+	color #45D0E9
+	
+	
+
+	

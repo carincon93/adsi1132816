@@ -1,0 +1,30 @@
+body {
+  background-color: #79dec7;
+  font: 16px Arial;
+  padding: 0px;
+  margin: 0px;
+}
+header {
+  background-color: #fff;
+  height: 120px;
+  margin: 0px;
+}
+header figure.logo {
+  background: #fff url("../imgs/sprite-web.png") no-repeat;
+  background-position: 0px 0px;
+  height: 90px;
+  margin: 0px;
+  width: 244px;
+}
+nav {
+  position: relative;
+  left: 600px;
+  top: -40px;
+}
+nav li {
+background-color
+  color: #fff;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 40px;
+}
