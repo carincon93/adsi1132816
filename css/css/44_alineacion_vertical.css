@@ -14,20 +14,20 @@ section#box {
 }
 article {
   border: 2px solid #c0c0c0;
-  display: table;
   width: 258px;
 }
-article.baseline p {
-  display: table-cell;
+article.baseline img {
   vertical-align: baseline;
 }
-article.top p {
-  display: table-cell;
+article.top img {
   vertical-align: top;
 }
-article.middle p {
-  display: table-cell;
+article.middle img {
   vertical-align: middle;
+}
+article p {
+  display: inline-block;
+  margin: 0;
 }
 
 
