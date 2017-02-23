@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rock, Paper, Scissor</title>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+	<div>
+		<section id="stage1" class="animated">
+			<figure></figure>
+			<input id="username" type="text" placeholder="Please enter your name">
+			<button id="next">Next</button>
+		</section>
+		<section id="stage2" class="animated">
+			<button id="prev">Previous</button>
+			<div>
+				<ul>
+					<li id="rock" class="rock" onclick="play('rock')"></li>
+					<li id="paper" class="paper" onclick="play('paper')"></li>
+					<li id="scissors" class="scissors" onclick="play('scissors')"></li>
+					<li id="computer"></li>
+				</ul>
+			</div>
+		</section>
+	</div>
+	<div id="modal" class="animated fadeInDown"><h1 id="name_modal"></h1></div>
+	<div id="modal_result" class="animated fadeOut"><h1 id="result"></h1></div>
+
+	<h1 id="option"></h1>
+
+	<script src="js/app.js"></script>
+</body>
+</html>

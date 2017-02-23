@@ -1,0 +1,37 @@
+body {
+  font: 16px Arial;
+}
+section {
+  background-color: #ccc;
+  height: 250px;
+  margin: 10px auto;
+  width: 250px;
+}
+h2 {
+  font-size: 1.2em;
+  text-align: center;
+}
+.border1 {
+  border-radius: 50%;
+}
+.border2 {
+  border-radius: 50% 50% 0% 0%;
+}
+.border3 {
+  border-radius: 0% 0% 50% 50%;
+}
+.border4 {
+  border-radius: 50% 0%;
+}
+.border5 {
+  border-radius: 0% 50%;
+}
+.border6 {
+  border-radius: 50% 0% 0% 50%;
+}
+.border7 {
+  border-radius: 0% 50% 50% 0%;
+}
+.border8 {
+  border-radius: 10% 20% 30%;
+}

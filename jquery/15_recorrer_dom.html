@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Recorrer DOM jQuery</title>
+	<link rel="stylesheet" href="css/animate.css">
+
+	<style>
+		section {
+			margin: 0 auto;
+			width: 60%;
+			height: 200px;
+			background-color: rgba(0,0,0, .5);
+			display: flex;
+    		align-items: center;
+		}
+		section div {
+			width: 100%;
+		}
+		ul {
+			padding: 0;
+			display: flex;
+    		justify-content: space-around;
+		}
+		ul li {
+			background-position: center center;
+			background-color: #fff;
+			background-repeat: no-repeat;
+			background-size: cover; 
+			display: inline-block;
+			border-radius: 60px;
+			height: 120px;
+			width: 120px;
+		}
+		ul li:nth-child(1) {background-image: url(imgs/);}
+		ul li:nth-child(2) {background-image: url(imgs/);}
+		ul li:nth-child(3) {background-image: url(imgs/);}
+		ul li:nth-child(4) {background-image: url(imgs/);}
+		ul li:nth-child(5) {background-image: url(imgs/);}
+		ul li:nth-child(6) {background-image: url(imgs/);}
+
+		.actived {
+			border: 1px solid ;
+		}
+	</style>
+</head>
+<body>
+	<h1>Recorrer DOM jQuery</h1>
+	<hr>
+	<section>
+		<div>
+			<ul>
+				<li class="animated"></li>
+				<li class="animated"></li>
+				<li class="animated"></li>
+				<li class="animated"></li>
+				<li class="animated"></li>
+				<li class="animated"></li>
+			</ul>
+			<nav>
+				<button id="btnFirst">Primero</button>
+				<button id="btnPrev">Anterior</button>
+				<button id="btnNext">Siguiente</button>
+				<button id="btnLast">Último</button>
+			</nav>
+		</div>
+	</section>
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			$fx = 'rubberBand';
+			$('ul li:first').addClass('actived '+$fx);
+
+			$('#btnNext').click(function(event){
+				$actual = $('li.actived');
+
+				if ($('ul li:last').hasClass('actived')) {
+					$('li.actived').removeClass('actived '+$fx);
+					$('ul li').first().addClass('actived '+$fx);
+				} else {
+					$('li.actived').removeClass('actived '+$fx);
+					$($actual).next().addClass('actived '+$fx);
+				}
+			});
+
+			$('#btnPrev').click(function(event){
+				$actual = $('li.actived');
+				if ($('li:first').hasClass('actived')) {
+					$('li.actived').removeClass('actived '+$fx);
+					$('ul li').last().addClass('actived '+$fx);
+				} else {
+					$('li.actived').removeClass('actived '+$fx);
+					$($actual).prev().addClass('actived '+$fx);
+				}
+			});
+
+			$('#btnFirst').click(function(event){
+				$actual = $('li.actived');
+					$('li.actived').removeClass('actived '+$fx);
+					$('ul li').first().addClass('actived '+$fx);
+			});
+
+			$('#btnLast').click(function(event){
+				$actual = $('li.actived');
+					$('li.actived').removeClass('actived '+$fx);
+					$('ul li').last().addClass('actived '+$fx);
+			});
+		});
+	</script>
+</body>
+</html>

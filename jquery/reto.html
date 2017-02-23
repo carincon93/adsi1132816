@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Arrastrar / Soltar jQuery UI</title>
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		section {
+			width: 100%;
+		}
+		.box1 {
+		}
+		.box2 {
+			background-color: blue;
+		}
+		.box3 {
+			background-color: #41a;
+		}
+		div.container {
+			display: flex;
+			min-height: 100%;
+		}
+		.pokemon {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			background-color: rgba(120,120, 50, 0.5);
+		}
+		#charmander {
+			background: rgba(120,120, 50, 0.5) url(imgs/Charmander.png) center center no-repeat;
+		}
+		#charmeleon {
+			background: rgba(120,120, 50, 0.5) url(imgs/Charmeleon.png) center center no-repeat !important;
+		}
+		#charizard {
+			background: rgba(120,120, 50, 0.5) url(imgs/Charizard.png) center center no-repeat !important;
+		}
+	</style>
+</head>
+<body>
+	<h1>Arrastrar / Soltar jQuery UI</h1>
+	<hr>
+	<div class="container">
+		<section class="box1">
+			<div id="charmander" class="pokemon"></div>
+		</section>
+		<section class="box2"></section>
+		<section class="box3"></section>
+	</div>
+	
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#charmander').draggable({
+				cursor: 'move',
+				revert: 'invalid'
+			});
+			$('.box2').droppable({
+				accept: "#charmander",
+				drop: function() {
+					$('#charmander').addClass('pokemon').attr('id', 'charmeleon');
+				}
+			});
+			$('.box3').droppable({
+				accept: "#charmeleon",
+				drop: function() {
+					$('#charmeleon').addClass('pokemon').attr('id', 'charizard');
+				}
+			});
+		});
+	</script>
+</body>
+</html>

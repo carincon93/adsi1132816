@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Arrastrar / Soltar jQuery UI</title>
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		section {
+			width: 100%;
+		}
+		.box1 {
+		}
+		.box2 {
+			background-color: rgb(255, 0, 0);
+		}
+		.box2 h1 {
+			color: #fff;
+			text-align: center;
+			font-size: 20px;
+			font-family: Arial;
+		}
+		div.container {
+			display: flex;
+			min-height: 100%;
+		}
+		.circle {
+			width: 200px;
+			height: 200px;
+			padding: 20px;
+			border-radius: 50%;
+			background-color: rgba(120,120, 50, 0.5);
+		}
+		#madrid {
+			background: rgba(120,120, 50, 0.5) url(imgs/1.png) center center no-repeat;
+			background-size: contain;
+		}
+		#milan {
+			background: rgba(120,120, 50, 0.5) url(imgs/2.png) center center no-repeat !important;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<section class="box1">
+			<div id="madrid" class="circle"></div>
+		</section>
+		<section class="box2">
+			<h1>Mejorar Equipo</h1>
+		</section>
+	</div>
+	
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#madrid').draggable({
+				cursor: 'move',
+				revert: 'invalid'
+			});
+			$('.box2').droppable({
+				accept: "#madrid",
+				drop: function() {
+					$('#madrid').addClass('circle').attr('id', 'milan');
+				}
+			});
+		});
+	</script>
+</body>
+</html>

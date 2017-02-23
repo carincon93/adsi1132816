@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Condicional (switch)</title>
+</head>
+<body>
+	<h1>Condicional (switch)</h1>
+	<hr>
+	<h2 id="saludo"></h2>
+
+	<script>
+		var saludo = document.getElementById('saludo');
+		var fecha = new Date();
+
+		switch(fecha.getDay()) {
+			case 0:
+		        saludo.innerHTML = "Hoy es Domingo";
+		        break;
+		    case 1:
+		        saludo.innerHTML = "Hoy es Lunes";
+		        break;
+		    case 2:
+		        saludo.innerHTML = "Hoy es Martes";
+		        break;
+		    case 3:
+		        saludo.innerHTML = "Hoy es Miercoles";
+		        break;
+		    case 4:
+		        saludo.innerHTML = "Hoy es Jueves";
+		        break;
+		    case 5:
+		        saludo.innerHTML = "Hoy es Viernes";
+		        break;
+		    case  6:
+		        saludo.innerHTML = "Hoy es Sábado";
+}
+		// document.getElementById("saludo").innerHTML = "Today is " + day;
+		
+	</script>
+</body>
+</html>

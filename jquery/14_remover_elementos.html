@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Remover Elementos jQuery</title>
+</head>
+<body>
+	<h1>Remover Elementos jQuery</h1>
+	<hr>
+	<ul id="tareas">
+		<li><button>&times;</button>Ir al SENA</li>
+		<li><button>&times;</button>Ir al SENA</li>
+		<li><button>&times;</button>Ir al SENA</li>
+		<li><button>&times;</button>Ir al SENA</li>
+	</ul>
+	<button id="vaciar">Vaciar</button>
+
+	<script src="js/jquery-3.1.1.js">Eliminar todas las tareas</script>
+	<script>
+		$(document).ready(function($) {
+			$('ul#tareas li button').click(function(event) {
+				$(this).parent().remove();
+			});
+			$('#vaciar').click(function(event) {
+				$('#tareas').empty();
+			});
+		});
+	</script>
+</body>
+</html>

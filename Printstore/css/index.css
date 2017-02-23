@@ -1,0 +1,449 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+.row:before, .row:after {
+    content: "";
+    display: table;
+}
+.row:after, .hero:after {
+    clear: both;
+}
+
+/**/
+body{
+	font-family: 'Source Sans Pro', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+.row{
+	margin: 0 auto;
+	width: 1170px;
+}
+header{
+	margin-top: 25px; 
+}
+section#topmenu{
+	background-color: #fff; 
+}
+section#topmenu div{
+	
+	display: inline-block;
+	height: 116px;
+	position: relative;
+	vertical-align: top;
+	width: 50%;
+}
+section#topmenu div.logo figure{
+	background: url(../imgs/logo.png) no-repeat center center; 
+	height: 79px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 538px;
+}
+section#topmenu div.links nav{
+	float: right;
+}
+
+section#topmenu div.links nav a{
+	color: #777;
+	font-size: 15px;
+	margin-left: 18px;
+	text-decoration: none;
+}
+section#topmenu div.links nav a:hover{
+	color: #1F1F1F;
+}
+section#mainmenu{
+	background-color: #333;
+}
+section#topmenu div.links form{
+	float: right;
+	margin: 5px 0 15px 0; 
+	display: flex;
+}
+section#topmenu div.links form input.searchform{
+	background: #f2f2f2;
+	border: none;
+	box-sizing: border-box;
+	height: 50px;
+	padding: 10px;
+	width: 313px;
+}
+section#topmenu div.links form button{
+	background: #f2f2f2;
+	border: none;
+	height: 50px;
+	width: 50px;
+}
+section#topmenu div.links form button:hover{
+	background: #f8f8f8;
+}
+
+section#mainmenu{
+	height: 60px;
+	
+}
+section#mainmenu nav ul{
+	display: table;
+	margin: 0;
+	padding: 0;
+	table-layout: fixed;
+	width: 100%;
+}
+section#mainmenu nav ul li{
+	display: table-cell;
+	position: relative;
+	list-style: none;
+	text-align: center;
+	text-transform: uppercase;
+}
+section#mainmenu nav ul li:hover{
+	background-color: #000;
+}
+section#mainmenu nav ul li a{
+	box-sizing: border-box;
+	color: #fff;
+	display: block;
+	height: 60px;
+	padding: 20px 0 18px;
+	text-decoration: none;
+	width: 100%;
+}
+
+section#slider{
+	background: url(../imgs/slide1.jpg) no-repeat center center;
+	background-size: cover;
+	height: 628px;
+	position: relative;
+}
+section#slider nav{
+	position: relative;
+	top: 200px;
+}
+section#slider nav button.hover{
+	background-color: rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+section#slider nav button.right{
+
+}
+section#cards article{
+	color: #fff;
+	display: inline-block;
+	padding: 28px;
+	width: 25%;
+}
+section#cards article.card1{
+	background-color: #FFD900;
+}
+section#cards article.card2{
+	background-color: #EB3C00;
+}
+section#cards article.card3{
+	background-color: #007EE1;
+}
+section#cards article.card4{
+	background-color: #5CA316;
+}
+
+section#cards article h1{
+	font-size: 42px;
+	margin: 10px 0 0 0;
+	line-height: 45px;
+	text-transform: uppercase;
+}
+section#cards article span{
+	font-weight: 100;
+}
+section#cards article p{
+	text-align: justify;
+	}
+
+section#cards article:hover{
+	color: #1F1F1F;
+	transition: all 0.3s ease;
+}
+
+/**/
+section#parallax1{
+	background: url(../imgs/paralax_img.jpg) no-repeat center center fixed;
+	background-size: cover; 
+	height: 500px;
+	overflow: hidden;
+}
+section#parallax1 article{
+	color: #333;
+	text-align: center;
+	text-transform: uppercase;
+}
+section#parallax1 article h1{
+	font-size: 80px;
+}
+section#parallax1 article h5{
+	font-size: 80px;
+	font-weight: 100;
+	margin: 0px; 
+}
+section#parallax1 article p{
+	color: #777;
+	font-size: 15px;
+	text-transform: none;
+}
+section article div.readmore{
+	margin-top: 40px;
+}
+section article div.readmore a{
+	border: 1px solid #777;
+	display: inline-block;
+	font-size: 20px;
+	height: 50px;
+	padding: 10px;
+	text-decoration: none;
+	width: 150px;
+}
+section article div.readmore a:hover{
+	background: #27B210;
+	border: none;
+	color: #fff;
+}
+section#parallax2{
+	background: url(../imgs/parallax_img2.jpg) no-repeat center center fixed;
+	background-position-y: -65px;
+	background-size: cover;
+	width: 100%;
+}
+section#parallax2 article h1{
+	color: #fff;
+	font-size: 80px;
+	text-align: center;
+}
+section#parallax2 article h1 span{
+	font-weight: 100;
+}
+
+.row2{
+	margin: 0 auto;
+	width: 1230px;
+}
+figure.crc1{
+	margin: 0;
+	width: 220px;
+}
+
+div.circles figure.crc2, figure.crc3, figure.crc4{
+	display: inline-block;
+	margin-left: 76.6px;
+	width: 220px;
+}
+div.circles figure.crc1{
+	display: inline-block;
+}
+
+svg.crc-svg{
+	width: 220px;
+	height: 224px;
+}
+path.cls-1{
+	fill: #007EE1;
+}
+path.cls-2{
+	fill: #5CA316;
+}
+path.cls-3{
+	fill: #FFD900;
+}
+path.cls-4{
+	fill: #EB3C00;
+}
+
+div.circles p{
+	color: #fff;
+	font-size: 25px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+}
+section article h1{
+	font-size: 80px;
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+section article h1 span{
+	font-weight: 100;
+}
+section#products article ul{
+	padding: 0;
+}
+
+section#products article ul li{
+	border: 1px solid #333;
+	display: inline-block;
+	height: 450px;
+	list-style: none;
+	margin: 0 0 30px 30px;
+	padding: 24px;
+	width: 270px;
+}
+section#products article ul li figure{
+	height: 252px;
+	margin: 0;
+	width: 230px;
+}
+section#products article ul li figure.product1{
+	background: url(../imgs/sprite.jpg) no-repeat center center;
+	background-position: -6px 60px;
+	background-size: 700px; 
+}
+section#products article ul li figure.product2{
+	background: url(../imgs/sprite.jpg) no-repeat center center;
+	background-position: -262px -2px;
+	background-size: 750px; 
+}
+section#products article ul li figure.product3{
+	background: url(../imgs/sprite.jpg) no-repeat center center;
+	background-position: -735px -15px;
+	background-size: 1050px; 
+}
+section#products article ul li figure.product4{
+	background: url(../imgs/sprite.jpg) no-repeat center center;
+	background-position: -2px -140px;
+	background-size: 600px; 
+}
+section#products article ul li figure.product5{
+	background: url(../imgs/sprite.jpg) no-repeat center center;
+	background-position: -466px -372px;
+	background-size: 1150px; 
+}
+section#products article ul li figure.product6{
+	background: url(../imgs/sprite.jpg) no-repeat center center;
+	background-position: -577px -216px;
+	background-size: 850px; 
+}
+section#products article ul li figure.product7{
+	background: url(../imgs/sprite.jpg) no-repeat center center;
+	background-position: -627px -444px;
+	background-size: 850px; 
+}
+section#products article ul li figure.product8{
+	background: url(../imgs/sprite.jpg) no-repeat center center;
+	background-position: -612px -772px;
+	background-size: 1350px; 
+}
+section#products article ul li {
+	text-align: center;
+}
+section#products article ul li a {
+	color: #333;
+	font-size: 1.5em;
+	text-decoration: none;
+}
+section#products article ul li a span{
+	font-size: 40px;
+	text-decoration: none;
+}
+section#products article ul li button {
+	border: none;
+	display: inline-block;
+	height: 50px;
+	width: 100%;
+	background-color: #333;
+	color: #fff;
+	text-transform: uppercase;
+}
+section#products article ul li nav a {
+	font-size: 1em;
+	margin-left: 5px;
+}
+section#products article ul li a h4 {
+	margin: 0;
+}
+
+section#parallax-events {
+	background: url(../imgs/parallax_img3.jpg) no-repeat center top fixed;
+	background-size: cover;
+	width: 100%;
+}
+section#parallax-events article {
+	text-align: center;
+}
+section#parallax-events article h1 {
+	color: #fff;
+}
+section#parallax-events article figure {
+	background-color: #333;
+	display: inline-block;
+	height: 320px;
+	width: 320px;
+	color: #fff;
+}
+section#parallax-events article figure.box-p{
+	background-color: #D66911;
+}
+section#parallax-events article figure.box-s{
+	background-color: #25C210;
+}
+section#parallax-events article figure.box-l{
+	background-color: #0489E6;
+}
+
+footer#footer-nav {
+	background-color: #333;
+	height: 400px;
+	padding: 50px;
+	width: 100%;
+}
+footer#footer-nav section nav {
+	display: inline-block;
+	float: left;
+	width: 25%;
+}
+footer#footer-nav section nav ul {
+	padding: 0;
+	margin: 0;
+}
+footer#footer-nav section nav  ul li {
+	margin-bottom: 15px;
+	list-style: none;
+}
+footer#footer-nav section nav  ul li a {
+	color: #777;
+	text-decoration: none;
+}
+footer#footer-nav section nav  ul li a:hover {
+	color: #fff;
+}
+footer#footer-nav section article {
+	display: inline-block;
+	width: 50%;
+}
+footer#footer-nav section article figure {
+	background: url(../imgs/logo_footer.png) no-repeat center top;
+	background-size: contain;
+	height: 55px;
+	margin: 0;
+	width: 355px;
+	display: inline-block;
+}
+footer#footer-nav section article p {
+	color: #777;
+	text-align: justify;
+}
+footer#footer-nav section nav.networks a {
+	background-color: #777;
+	border-radius: 38px; 
+	color: #333;
+	display: inline-block;
+	height: 51px;
+	padding: 17px;
+	text-decoration: none;
+	width: 51px;
+}
+footer#footer-nav section nav.networks a:hover {
+	background-color: #fff;
+}
+
+body > section {
+	padding: 40px;
+}

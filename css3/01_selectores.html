@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Nuevo Selectores CSS 3</title>
+	<link rel="stylesheet" href="css/01_selectores.css">
+</head>
+<body>
+	<h1>Nuevo Selectores CSS 3</h1>
+	<hr>
+	<!-- ......( p~ul )...... -->
+	<!-- ~ -> Virgulina -->
+	<fieldset>
+		<legend>
+			<h2>p~ul</h2>
+		</legend>
+		<ul>
+			<li>Lorem Ipsum 1</li>
+			<li>Lorem Ipsum 2</li>
+			<li>Lorem Ipsum 3</li>
+		</ul>
+		<p></p>
+		<ul>
+			<li>Consectetur Adipisicing 1</li>
+			<li>Consectetur Adipisicing 2</li>
+			<li>Consectetur Adipisicing 3</li>
+		</ul>
+		
+	</fieldset>
+
+	<fieldset>
+		<legend>
+			<h2>a[href^=https]</h2>
+		</legend>
+		<a href="http://www.co.yahoo.com">Ir a Yahoo</a>
+		<a href="https://www.google.com.co">Ir a Google</a>
+		<a href="http://www.web.whatsapp.com">Ir a Whatsapp</a>
+		<a href="https://www.facebook.com">Ir a Facebook</a>
+	</fieldset>
+
+	<fieldset>
+		<legend>
+			<h2>a[href$=pdf]</h2>
+		</legend>
+		<a href="files/a.pdf">a pdf</a>
+		<a href="files/b.docx">b docx</a>
+		<a href="files/c.psd">c psd</a>
+		<a href="files/d.ai">d ai</a>
+	</fieldset>
+
+	<fieldset>
+		<legend>
+			<h2>a[href*=google]</h2>
+		</legend>
+		<a href="http://www.google.com.co">Google</a>
+		<a href="http://www.co.yahoo.com">Yahoo</a>
+		<a href="http://www.facebook.com">Facebook</a>
+		<a href="http://www.web.whatsapp.com">Whatsapp</a>
+	</fieldset>
+
+	<fieldset class="first">
+		<legend>
+			<h2>p:first-of-type</h2>
+		</legend>
+		<p>lorem</p>
+		<p>lorem</p>
+		<p>lorem</p>
+		<p>lorem</p>
+	</fieldset>
+
+	<fieldset class="last">
+		<legend>
+			<h2>p:last-of-type</h2>
+		</legend>
+		<p>lorem</p>
+		<p>lorem</p>
+		<p>lorem</p>
+		<p>lorem</p>
+	</fieldset>
+
+	<fieldset class="only">
+		<legend>
+			<h2>p:only-of-type</h2>
+		</legend>
+		<div>lorem</div>
+		<p>lorem</p>
+		<em>lorem</em>
+		<h3>lorem</h3>
+	</fieldset>
+
+	<fieldset class="onlyc">
+		<legend>
+			<h2>p:only-child</h2>
+		</legend>
+		<div>
+			<p>lorem</p>
+		</div>
+		
+	</fieldset>
+
+	<fieldset class="nc">
+		<legend>
+			<h2>p:nth-child()</h2>
+		</legend>
+		<div>
+			<p>lorem</p>
+			<p>lorem</p>
+			<p>lorem</p>
+			<p>lorem</p>
+		</div>
+		
+	</fieldset>
+
+	<fieldset class="nlc">
+		<legend>
+			<h2>p:nth-last-child()</h2>
+		</legend>
+		<div>
+			<p>lorem</p>
+			<p>lorem</p>
+			<p>lorem</p>
+			<p>lorem</p>
+		</div>
+		
+	</fieldset>
+
+	<fieldset class="not">
+		<legend>
+			<h2>p:nth-of-type()</h2>
+		</legend>
+		<div>
+			<p>lorem</p>
+			<div>lorem</div>
+			<p>lorem</p>
+			<div>lorem</div>
+		</div>
+		
+	</fieldset>
+
+	<fieldset class="nlot">
+		<legend>
+			<h2>p:nth-last-of-type()</h2>
+		</legend>
+		<div>
+			<p>lorem</p>
+			<div>lorem</div>
+			<p>lorem</p>
+			<div>lorem</div>
+		</div>
+		
+	</fieldset>
+
+	<fieldset class="lc">
+		<legend>
+			<h2>p:last-child</h2>
+		</legend>
+		<div>
+			<p>lorem</p>
+			<div>lorem</div>
+			<p>lorem</p>
+			
+		</div>
+		
+	</fieldset>
+
+	<fieldset>
+		<legend>
+			<h2>:root</h2>
+		</legend>
+		<p>Revisar fondo del documento</p>
+		
+	</fieldset>
+
+	<fieldset class="empty">
+		<legend>
+			<h2>p:empty</h2>
+		</legend>
+		<p>lorem</p>
+		<p></p>
+		<p>lorem</p>
+		<p></p>
+		
+	</fieldset>
+
+	<fieldset class="target">
+		<legend>
+			<h2>#destino:target</h2>
+		</legend>
+		<a href="#destino1">Sucesos</a>
+		<a href="#destino2">Nacional</a>
+		<a href="#destino3">Noticias</a>
+		<a href="#destino4">Regional</a>
+		
+		<section class="idt">
+			<p id="destino1">Sucesos</p>
+			<p id="destino2">Nacional</p>
+			<p id="destino3">Noticias</p>
+			<p id="destino4">Regional</p>
+		</section>
+		
+		
+	</fieldset>
+
+	<fieldset class="enabled">
+		<legend>
+			<h2>input:enabled</h2>
+			<h2>input:disabled</h2>
+		</legend>
+		<section>
+			<input type="text">
+			<input type="text" disabled>
+			<input type="text">
+			<input type="text" disabled>
+		</section>
+		
+	</fieldset>
+
+	<fieldset class="checked">
+		<legend>
+			<h2>input:checked</h2>
+		</legend>
+		<section>
+			<input type="checkbox" name="club">Milan
+			<input type="checkbox" name="club" checked>Inter
+			<input type="checkbox" name="club">Juventus
+			<input type="checkbox" name="club" checked>Roma
+		</section>
+		
+	</fieldset>
+
+	<fieldset>
+		<legend>
+			<h2>:not()</h2>
+		</legend>
+		<section class="nt">
+			<p>lorem</p>
+			<div>lorem</div>
+			<p>lorem</p>
+		</section>
+		
+	</fieldset>
+
+	<fieldset>
+		<legend>
+			<h2>::selection</h2>
+		</legend>
+		<em>
+			Selecciona la porción de un elemento que es seleccionado por un usuario
+		</em>
+		<section class="slt">
+			<p class="color1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eos dolor distinctio nisi asperiores culpa sit ipsum, recusandae eaque cupiditate veritatis quibusdam architecto praesentium, amet impedit provident eveniet error, quae.</p>
+			<p class="color2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eos dolor distinctio nisi asperiores culpa sit ipsum, recusandae eaque cupiditate veritatis quibusdam architecto praesentium, amet impedit provident eveniet error, quae.</p>
+			<p class="color3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eos dolor distinctio nisi asperiores culpa sit ipsum, recusandae eaque cupiditate veritatis quibusdam architecto praesentium, amet impedit provident eveniet error, quae.</p>
+		</section>
+	</fieldset>
+
+
+
+</body>
+</html>

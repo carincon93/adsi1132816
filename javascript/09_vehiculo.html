@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objetos (Vehiculo)</title>
+	<link rel="stylesheet" href="css/09_vehiculo.css">
+	<link rel="stylesheet" href="css/icons.css">
+</head>
+<body>
+	<ul id="info">
+		<li id="emarca"></li>
+		<li id="ereferencia"></li>
+		<li id="emodelo"></li>
+		<li id="eimagen"></li>
+		<li id="ecilindraje"></li>
+		<li>CONTROLES</li>
+		<li>
+			<ul>
+				<i id="ini">encender</i>
+				<i id="det">detener</i>
+				<i id="ava">avanzar</i>
+				<i id="fre">frenar</i>
+				<i id="giz">girar izquierda</i>
+				<i id="gde">girar derecha</i>
+			</ul>
+		</li>
+	</ul>
+	<div id="vhcl">
+		<img src="imgs/beetle.png" width="240px">
+	</div>
+	<script src="js/vehiculo.js"></script>
+	<script>
+		vehiculo.info();
+		vehiculo.controles();
+	</script>
+</body>
+</html>
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos Js</title>
+	<style>
+		body {
+			font: 16px Arial;
+		}
+		figure#car {
+			height: 200px;
+			margin: 50px auto;
+			position: relative;
+			width: 400px;
+		}
+		figure#car.car1 {
+			background: url(imgs/car1.png) no-repeat;
+		}
+		figure#car.car2 {
+			background: url(imgs/car2.png) no-repeat;
+		}
+		figure#car.car3 {
+			background: url(imgs/car3.png) no-repeat;
+		}
+		figure#car.out-anim {
+			-webkit-animation: 0.5s animOut ease-in 1;
+		}
+		
+		@-webkit-keyframes animOut {
+			0% { -webkit-trasnform: translateX(0px); }
+			100% {-webkit-transform: translateX(1000px);}
+		}
+		figure#car.in-anim {
+			-webkit-animation: 0.5s animIn ease-in 1;
+		}
+		@-webkit-keyframes animIn {
+			0% { -webkit-transform: translateX(-1000px); }
+			100% {-webkit-transform: translateX(0px);}
+		}
+	</style>
+</head>
+<body id="doc">
+	<h1>Eventos Js</h1>
+	<hr>
+	<select id="tcar">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+	</select>
+	<figure id="car"></figure>
+
+	<script>
+		var doc = document.getElementById('doc');
+		var tcar = document.getElementById('tcar');
+		var car = document.getElementById('car');
+		var pl = pt = 0;
+		car.classList.add('car1');
+
+		doc.onkeydown = function(evt) {
+			switch(evt.keyCode) {
+				case 37:
+					console.log("LEFT");
+					pl -= 20;
+					car.style.left = pl+'px';
+					break;
+				case 38:
+					console.log("TOP");
+					pt -= 20;
+					car.style.top = pt+'px';
+					break;
+				case 39:
+					console.log("RIGHT");
+					pl += 20;
+					car.style.left = pl+'px';
+					break;
+				case 40:
+					console.log("BOTTOM");
+					pt += 20;
+					car.style.top = pt+'px';
+					break;
+			}
+		}
+
+
+		tcar.onchange = function() {
+			// body...
+			// car.className = '';
+			car.classList.remove('in-anim');
+			car.classList.add('out-anim');
+			if(this.value == 1) { 
+				setTimeout(function() {
+					car.classList.remove('car2', 'car3', 'out-anim');
+					car.classList.add('in-anim','car1');
+				},500);
+			}
+			if(this.value == 2) { 
+				setTimeout(function() {
+					car.classList.remove('car1', 'car3', 'out-anim');
+					car.classList.add('in-anim','car2');
+				},500);
+			}
+			if(this.value == 3) { 
+				setTimeout(function() {
+					car.classList.remove('car1', 'car2', 'out-anim');
+					car.classList.add('in-anim','car3');
+				},500);
+
+		}
+	}
+	</script>
+</body>
+</html>

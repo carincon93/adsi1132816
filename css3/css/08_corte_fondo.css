@@ -1,0 +1,17 @@
+section {
+    background: #f00 url(../imgs/borde.png) no-repeat; 
+    border: 40px solid transparent;
+    height: 300px;
+    margin: 20px;
+    padding: 20px;
+    width: 600px;
+}
+.corte1 {
+    background-clip: border-box;
+}
+.corte2 {
+    background-clip: padding-box;
+}
+.corte3 {
+    background-clip: content-box;
+}

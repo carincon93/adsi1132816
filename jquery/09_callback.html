@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Callback jQuery</title>
+	<style>
+		body {
+			font-family: Arial;
+			background-color: #BE6133;
+		}
+		button {
+			border: none;
+			background-color: #DE865A;
+			color: #fff;
+			display: block;
+			padding: 10px;
+			width: 160px;
+		}
+		button:hover {
+			background-color: #D4794C;
+			cursor: pointer;
+		}
+		section#modal {
+			background-color: rgba(0,0,0,.6);
+			height: 100%;
+			width: 100%;
+			position: fixed;
+			left: 0px;
+			top: 0px;
+		}
+		section#modal article {
+			background-color: #fff;
+			margin: 15% auto;
+			padding: 20px;
+			position: relative;
+			top: -1000px;
+			width: 60%;
+		}
+		section#modal article button {
+
+		}
+	</style>
+</head>
+<body>
+	<section id="modal">
+		<article>
+			<h2></h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae rem mollitia fugit, voluptate expedita, molestias.</p>
+			<button id="">Cerrar Ventana Modal</button>
+		</article>
+	</section>
+
+	<h1>Callback jQuery</h1>
+	<hr>
+	<button id="btnOpenModal">Abrir Ventana Modal</button>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#modal').hide();
+			$('#modal article').hide();
+
+			$('#btnOpenModal').click(function(event) {
+				$('#modal').fadeIn('slow', function() {
+					$('#modal article').show();
+					$('#modal article').animate({top:'0px'}, 500);
+				});
+			});
+			$('#modal article button, #modal').click(function(event) {
+				$('#modal article').animate({top: '-1000px'}, 500, function() {
+					$(this).hide();
+					$('#modal').fadeOut('slow');
+				});
+			});
+		});
+	</script>
+</body>
+</html>

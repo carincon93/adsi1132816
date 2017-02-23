@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Operadores Lógicos</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			color: #777;
+			font: 16px Arial;
+			padding: 4px;
+			margin: 100px auto;
+			padding: 4px;
+			width: 800px;
+		}
+		table td, table th {
+			border: 1px dotted #ccc;
+			padding: 8px;
+		}
+		table th {
+			background-color: #999;
+			color: #fff;
+		}
+		table tr:nth-child(even) {
+			background-color: #ddd;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+		<tr>
+			<td colspan="4">Operadores Lógicos</td>
+		</tr>
+			<tr>
+				<th>Operador</th>
+				<th>Descripción</th>
+				<th>Ejemplo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>&&</td>
+				<td>Y</td>
+				<td id="r1"></td>
+			</tr>
+			<tr>
+				<td>||</td>
+				<td>O</td>
+				<td id="r2"></td>
+			</tr>
+			<tr>
+				<td>!</td>
+				<td>No</td>
+				<td id="r3"></td>
+			</tr>
+		</tbody>
+	</table>
+	<script>
+		// Variables
+		var x	= 6;
+		var y	= 3;
+		var r1 	= document.getElementById('r1');
+		var r2 	= document.getElementById('r2');
+		var r3 	= document.getElementById('r3');
+
+		// Respuestas
+		r1.innerHTML 		= '(x < 10 && y > 1) is ' + (x < 10 && y > 1);
+		r2.innerHTML 		= '(x == 5 || y == 5) is '+ (x == 5 || y == 5);
+		r3.innerHTML 		= '!(x == 8) is ' + !(x == 8);
+
+
+	</script>
+</body>
+</html>

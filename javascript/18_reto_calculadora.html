@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator JS</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		form {
+			margin: 0 auto;
+			width: 500px;
+			background: -webkit-linear-gradient(left, rgba(123,127,201,1) 0%, rgba(117,189,209,1) 82%, rgba(73,165,191,1) 100%);
+		}
+		input {
+			border: none;
+			font-size: 3em;
+			opacity: 0.8;
+			color: #fff;
+		}
+		input#display {
+			width: 78%;
+			height: 110px;
+			padding: 20px;
+			font-size: 3em;
+			color: #fff;
+			background-color: #333;
+		}
+		input {
+			height: 110px;
+			width: 26%;
+		}
+		input#eraseDisplay, input#btndivided, input#btnminus, input#btnelevated, input#btntimes{
+			width: 22%;
+		}
+		input:hover {
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<input type="text" id="display" name="display"><input id="eraseDisplay" type="button" value="C"><input id="btn7" type="button" value="7"><input id="btn8" type="button" value="8"><input id="btn9" type="button" value="9"><input id="btndivided" type="button" value="/"><input id="btn4" type="button" value="4"><input id="btn5" type="button" value="5"><input id="btn6" type="button" value="6"><input id="btntimes" type="button" value="*"><input id="btn1" type="button" value="1"><input id="btn2" type="button" value="2"><input id="btn3" type="button" value="3"><input id="btnminus" type="button" value="-"><input id="btn0" type="button" value="0"><input id="btnequal" type="button" value="="><input id="btnplus" type="button" value="+"><input id="btnelevated" type="button" value="^">
+	</form>
+	<script>
+		eraseDisplay.onclick = function() {
+			document.getElementById('display').value = '';
+		}
+
+		btnplus.onclick = function() {
+			document.getElementById('display').value += '+';
+			}
+		btnminus.onclick = function() {
+			document.getElementById('display').value += '-';
+			}
+		btntimes.onclick = function() {
+			document.getElementById('display').value += '*';
+			}
+		btndivided.onclick = function() {
+			document.getElementById('display').value += '/';
+			}
+		btnequal.onclick = function() {
+			document.getElementById('display').value = eval(document.getElementById('display').value);
+
+			}
+		btn1.onclick = function() {
+				display.value += 1; 
+			}
+		btn2.onclick = function() {
+				display.value += 2; 
+			}
+		btn3.onclick = function() {
+				display.value += 3; 
+			}
+		btn4.onclick = function() {
+				display.value += 4; 
+			}
+		btn5.onclick = function() {
+				display.value += 5; 
+			}
+		btn6.onclick = function() {
+				display.value += 6; 
+			}
+		btn7.onclick = function() {
+				display.value += 7; 
+			}
+		btn8.onclick = function() {
+				display.value += 8; 
+			}
+		btn9.onclick = function() {
+				display.value += 9; 
+			}
+		btn0.onclick = function() {
+				display.value += 0; 
+			}
+	</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+html
+	font-size 63.5%
+body
+	background-color #B8B3B3
+	font 1.6rem Arial
+fieldset
+	border none
+	background-color #fff
+
+	margin 20px auto
+	width 800px
+fieldset legend
+	background-color #E3E3E3
+	color #fff
+	padding 10px 40px
+fieldset legend h2
+	margin 0px
+	padding 0px
+	
+p~ul /* Selecciona todos los elementos <ul> precedidos por el elemnto <p> */
+	background-color #E6BFBF
+	
+	
+a[href^=https] /*Selecciona todos los elementos <a> cuyo valor del atributo href comienza con "https" */
+	background-color #E6BFBF
+	border 2px solid #E5BBBB
+	color #fff
+	padding 10px
+
+a[href$=pdf] /* Selecciona todos los elementos <a> cuyo valor del atributo termina con ".Pdf" */
+	background-color #E6BFBF
+	border 2px solid #E5BBBB
+	color #FFF
+	padding 10px
+
+a[href*=google] /* Selecciona todos los elementos <a> cuyo valor del atributo href contiene la cadena "google" */
+	background-color #E6BFBF
+	border 2px solid #E5BBBB
+	color #FFF
+	padding 10px
+	
+fieldset.first p:first-of-type /* Selecciona el primer elemento <p> de su padre */
+	background-color #E6BFBF
+	border 2px solid #E5BBBB
+	color #FFF
+	padding 10px
+	
+fieldset.last p:last-of-type /* Selecciona el último elemento <p> de su padre */
+	background-color #E6BFBF
+	border 2px solid #E5BBBB
+	color #FFF
+	padding 10px
+	
+fieldset.only p:only-of-type /* Selecciona el único elemento <p> de su padre */
+	background-color #E6BFBF
+	border 2px solid #E5BBBB
+	color #FFF
+	padding 10px
+
+fieldset.onlyc p:only-child /* Selecciona el único elemento hijo <p> de su padre */
+	background-color #E6BFBF
+	border 2px solid #E5BBBB
+	color #FFF
+	padding 10px
+
+fieldset.nc p:nth-child(3) /* Selecciona el tercer elemento hijo <p> de su padre */
+	background-color #E6BFBF
+	border 2px solid #E5BBBB
+	color #FFF
+	padding 10px
+
+fieldset.nlc p:nth-last-child(1) /* Selecciona el primer elemento hijo <p>, contando desde el último elem hijo */
+	background-color #E6BFBF
+	border 2px solid #E5BBBB
+	color #FFF
+	padding 10px	
+/*  */
+fieldset.not p:nth-of-type(2) /* Selecciona el segundo elemento hijo <p> de su padre */
+	background-color #E6BFBF
+	border 2px solid #E5BBBB
+	color #FFF
+	padding 10px
+
+fieldset.nlot p:nth-last-of-type(1) /* Selecciona el primer elemento hijo <p>, contando desde el último elem hijo */
+	background-color #E6BFBF
+	border 2px solid #E5BBBB
+	color #FFF
+	padding 10px
+	
+fieldset.lc p:last-child /* Selecciona el último elemento <p> de su padre */
+	background-color #E6BFBF
+	border 2px solid #E5BBBB
+	color #FFF
+	padding 10px	
+
+:root /* Selecciona el elemento raíz del documento */
+	background #E6BFBF
+	
+fieldset.empty p:empty /* Selecciona los elementos <p> que no tiene hijos (incluidos los nodos de texto) */
+	background-color #E6BFBF
+	border 2px solid #E5BBBB
+	color #FFF
+	padding 10px
+
+fieldset.target a[href*=destino] /* Selecciona el elemento #noticias actualmente activ (Se hace clic en el enlace que contiene ese nombre de ancla) */
+#destino1:target
+#destino2:target
+#destino3:target
+#destino4:target
+	background-color #E6BFBF
+	border 2px solid #E5BBBB
+	color #FFF
+	padding 10px
+
+input
+	border none
+	padding 10px
+input:enabled /* Selecciona todos los elementos <input> habilitados */
+	background-color none
+	border 2px solid #E6BFBF
+	color #000
+input:disabled /* Selecciona todos los elementos <input> inhabilitados */
+	background-color none
+
+
+input[type=checkbox]
+	-webkit-appearance none
+	border 1px solid #f00
+	padding 5px
+input:checked /* Selecciona todos los elementos <input> marcados */
+	background-color #E6BFBF
+	
+.nt :not(p) /* Selecciona cada elemento que no es un elemento <p> */
+	background-color #E6BFBF
+	border 2px solid #E5BBBB
+	color #FFF
+	padding 10px
+	
+.slt .color1::selection /* Selecciona porción de un elemento que es seleccionado por un usuario */
+	background-color #FFAAAA
+.slt .color2::selection
+	background-color #D46A6A
+.slt .color3::selection
+	background-color #AA3939
+	color white

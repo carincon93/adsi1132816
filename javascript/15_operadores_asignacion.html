@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Operadores Asignación</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			color: #777;
+			font: 16px Arial;
+			padding: 4px;
+			margin: 100px auto;
+			padding: 4px;
+			width: 800px;
+		}
+		table td, table th {
+			border: 1px dotted #ccc;
+			padding: 8px;
+		}
+		table th {
+			background-color: #999;
+			color: #fff;
+		}
+		table tr:nth-child(even) {
+			background-color: #ddd;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+		<tr>
+			<td colspan="4">Operadores Asignación</td>
+		</tr>
+			<tr>
+				<th>Operador</th>
+				<th>Ejemplo</th>
+				<th>Igual</th>
+				<th>Resultado X</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>=</td>
+				<td>x=y</td>
+				<td>x=5</td>
+				<td id="rigual"></td>
+			</tr>
+			<tr>
+				<td>x=</td>
+				<td>x+=y</td>
+				<td>x=x+y</td>
+				<td id="masigual"></td>
+			</tr>
+			<tr>
+				<td>-=</td>
+				<td>x-=y</td>
+				<td>x=x-y</td>
+				<td id="menosigual"></td>
+			</tr>
+			<tr>
+				<td>*=</td>
+				<td>x*=y</td>
+				<td>x=x*y</td>
+				<td id="multiplicar"></td>
+			</tr>
+			<tr>
+				<td>/=</td>
+				<td>x/=y</td>
+				<td>x=x/y</td>
+				<td id="dividir"></td>
+			</tr>
+			<tr>
+				<td>%=</td>
+				<td>x%=y</td>
+				<td>x=x%y</td>
+				<td id="residuo"></td>
+			</tr>
+		</tbody>
+	</table>
+	<script>
+		// Variables
+		var y			= 5;
+		var x 			= 10;
+		var igual 		= document.getElementById('rigual');
+		var masigual 	= document.getElementById('masigual');
+		var menosigual 	= document.getElementById('menosigual');
+		var multiplicar = document.getElementById('multiplicar');
+		var dividir 	= document.getElementById('dividir');
+		var residuo 	= document.getElementById('residuo');
+
+		// Respuestas
+		rigual.innerHTML 		= 'x=' + (x = y);
+		x = 10;
+		masigual.innerHTML 		= 'x=' + (x += y);
+		x = 10;
+		menosigual.innerHTML 	= (x -= y);
+		x = 10;
+		multiplicar.innerHTML 	= (x *= y);
+		x = 10;
+		dividir.innerHTML 		= (x /= y);
+		x = 10;
+		residuo.innerHTML 		= (x %= y);
+	</script>
+</body>
+</html>

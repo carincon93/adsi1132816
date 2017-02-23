@@ -1,0 +1,54 @@
+section
+	background-color #ccc
+	height 150px
+	margin 20px auto
+	width 150px
+	
+/* Interpolacion */
+vendor(prop, args)
+	-webkit-{prog} args
+	-moz-{prog} args
+	-ms-{prog} args
+	{prop} args
+box-shadow()
+	vendor('box-shadow', arguments)
+	
+.box1
+	box-shadow 0px 0px 10px #000
+.box2
+	box-shadow 2px 2px 20px #f00
+.box3
+	box-shadow -10px -10px 12px #00f
+
+nav
+	border 1px solid #ccc
+	padding 10px
+	margin 20px auto
+	width 1016px
+	
+	li
+		background url(../imgs/color.png) no-repeat center center
+		display inline-block
+		list-style none
+		height 200px
+		width 200px
+	li.img1
+		filter grayscale(1)
+		&:hover
+			filter grayscale(0)
+	li.img2
+		filter brightness(10)
+		&:hover
+			filter brightness(1)
+	li.img3
+		filter contrast(0.2)
+		&:hover
+			filter contrast(1)
+	li.img4
+		filter hue-rotate(180deg)
+		&:hover
+			filter hue-rotate(0deg)
+	li.img5 
+		filter opacity(0.5)
+		&:hover
+			filter opacity(1)

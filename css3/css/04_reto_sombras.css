@@ -1,0 +1,10 @@
+body {
+  background-color: #791b28;
+}
+section {
+  background-color: #f00;
+  height: 20px;
+  margin: 200px auto 100px auto;
+  width: 20px;
+  box-shadow: 20px 0px #f00, 40px 0px #f00, 60px 0px #f00, 80px 0px #f00, -20px 20px #f00, 0px 20px #f00, 20px 20px #f00, 40px 20px #f00, 60px 20px #f00, 80px 20px #f00, 100px 20px #f00, 120px 20px #f00, 140px 20px #f00, -20px 40px #5a2d00, 0px 40px #5a2d00, 20px 40px #5a2d00, 40px 40px #c6a68b, 60px 40px #c6a68b, 80px 40px #000, 100px 40px #c6a68b, -40px 60px #5a2d00, -20px 60px #c6a68b, 0px 60px #5a2d00, 20px 60px #c6a68b, 40px 60px #c6a68b, 60px 60px #c6a68b, 80px 60px #000, 100px 60px #c6a68b, 120px 60px #c6a68b, 140px 60px #c6a68b, -40px 80px #5a2d00, -20px 80px #c6a68b, 0px 80px #5a2d00, 20px 80px #5a2d00, 40px 80px #c6a68b, 60px 80px #c6a68b, 80px 80px #c6a68b, 100px 80px #000, 120px 80px #c6a68b, 140px 80px #c6a68b, 160px 80px #c6a68b, -40px 100px #5a2d00, -20px 100px #5a2d00, 0px 100px #c6a68b, 20px 100px #c6a68b, 40px 100px #c6a68b, 60px 100px #c6a68b, 80px 100px #000, 100px 100px #000, 120px 100px #000, 140px 100px #000, -20px 120px #c6a68b, 0px 120px #c6a68b, 20px 120px #c6a68b, 40px 120px #c6a68b, 60px 120px #c6a68b, 80px 120px #c6a68b, 100px 120px #c6a68b, 120px 120px #c6a68b, -20px 140px #f00, 0px 140px #f00, 20px 140px #0730b5, 40px 140px #f00, 60px 140px #f00, 80px 140px #f00;
+}

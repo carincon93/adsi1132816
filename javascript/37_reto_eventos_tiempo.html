@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reto Evenetos Tiempo</title>
+</head>
+<style>
+	section {
+		display: flex;
+		justify-content: center;
+	}
+</style>
+<body>
+	<section>
+		<input type="number" id="cronometro">
+		<button id="start">Start</button>
+		
+		<h2 id="display"></h2>
+	</section>
+	<script>
+		var display = document.getElementById('display');
+
+		var start = document.getElementById('start');
+
+		start.onclick = function() {
+			var cronometro = document.getElementById('cronometro').value;
+
+			var interval = setInterval(function() {
+			if (cronometro == 0) {
+				clearInterval(interval);
+			}
+			display.innerHTML = cronometro+' segundos';
+			cronometro--;
+		},1000);
+		}
+	</script>
+</body>
+</html>

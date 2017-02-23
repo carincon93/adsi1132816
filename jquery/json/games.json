@@ -1,0 +1,20 @@
+{
+	"game1": {
+		"name": "Mario Bross"
+	},
+	"game2": {
+		"name": "Kirby Deluxe"
+	},
+	"game3": {
+		"name": "Super Metroid"
+	},
+	"game4": {
+		"name": "Donkey Kong"
+	},
+	"game5": {
+		"name": "Contra"
+	},
+	"game6": {
+		"name": "Double Dragon"
+	}
+}

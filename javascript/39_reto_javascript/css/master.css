@@ -1,0 +1,115 @@
+#modal {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	display: none;
+	font-size: 60px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;	
+}
+.animated {
+	-webkit-animation-duration: 3s;
+    animation-duration: 3s;
+}
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body {
+	font-size: 16px;
+	font-family: Verdana;
+	background: -webkit-linear-gradient(left, rgba(235,229,202,1) 0%, rgba(248,245,230,1) 53%, rgba(235,229,202,1) 100%);
+	margin: 0;
+}
+body div {
+	align-items: center;
+	display: flex;	
+    height: 100%;
+	justify-content: center;
+}
+section {
+	height: 400px;
+	width: 800px;
+}
+section#stage1 {
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+}
+section#stage1 figure {
+	background: #f8f5e6 url(../imgs/img1.jpg) center center no-repeat;
+	flex: 1;
+	height: 100%;
+	margin: 0;
+}
+section#stage1 input {
+	border: none;
+	padding: 10px;
+	text-align: center;
+}
+section#stage2 {
+	background-color: #f8f5e6;
+	display: flex;
+	flex-direction: column-reverse;
+}
+section#stage2 div {
+	flex: 1;
+	flex-direction: row;
+}
+section#stage2 div ul {
+    align-items: center;
+	display: flex;
+	height: 100%;
+	flex-direction: row;
+    justify-content: space-around;    
+	list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+section#stage2 div ul li {
+	background-color: #ebe5ca;     
+    height: 65%;
+	width: 22%;
+}
+section#stage2 div ul li:last-child {
+	background-color: rgba(235, 229, 202, 0.3);
+}
+li.rock {
+	background: url(../imgs/rock.png) no-repeat center center;
+	background-size: contain;
+}
+li.paper {
+	background: url(../imgs/paper.png) no-repeat center center;
+	background-size: contain;
+}
+li.scissors {
+	background: url(../imgs/scissors.png) no-repeat center center;
+	background-size: contain;
+}
+section button {
+	background-color: #904a75;
+	border: none;
+	color: #fff;
+	display: block;
+	padding: 10px;
+}
+div section#stage2 ul li:hover {
+	cursor: pointer;
+	opacity: 1;
+	transform: scaleY(1.1);
+}
+div#modal_result {
+	color: white;	
+	cursor: default;
+	display: none;
+	font-size: 80px;
+	position: absolute;
+    top: 0;
+	width: 100%;
+}

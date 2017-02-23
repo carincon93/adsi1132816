@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Efectos jQuery</title>
+	<style>
+		body {
+			background-color: #83B2B1;
+			font-family: Arial;
+		}
+		section {
+			background: #fff;
+			color: #666;
+			padding: 10px;
+			width: 300px;
+			display: inline-block;
+			vertical-align: top;
+		}
+		section h2 {
+			text-align: center;
+		}
+		section button {
+			background-color: #A7CFD5;
+			border: none;
+			display: block;
+			width: 100%;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<h1>Efectos jQuery</h1>
+	<hr>
+	<section>
+		<h2>Hide / Show</h2>
+		<img src="imgs/monster.jpg" width="300px">
+		<button id="btn1">Hide</button>
+		<button id="btntoggle1">Toggle</button>
+	</section>
+
+	<section>
+		<h2>SlideDown / SlideUp</h2>
+		<img src="imgs/monster.jpg" width="300px">
+		<button id="btn2">SlideDown</button>
+		<button id="btntoggle2">SlideToggle</button>
+		<button id="btnstop">Stop</button>
+	</section>
+
+	<section>
+		<h2>FadeOut / FadeIn / FadeTo</h2>
+		<img src="imgs/monster.jpg" width="300px">
+		<button id="btn3">Fade Out</button>
+		<button id="btntoggle3">FadeToggle</button>
+		<button id="btnto">Fade To</button>
+	</section>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('body').on('click', '#btn1',  function(event) {
+				event.preventDefault();
+				if ($(this).text() == 'Hide') {
+					$(this).prev().hide();
+					$(this).text('Show');
+				} else {
+					$(this).prev().show();
+					$(this).text('Hide');
+				}
+			});
+
+			$('body').on('click', '#btntoggle1',  function(event) {
+				event.preventDefault();
+				$(this).prev().prev().toggle();
+			});
+
+			$('body').on('click', '#btn2',  function(event) {
+				event.preventDefault();
+				if ($(this).text() == 'SlideDown') {
+					$(this).prev().slideUp(1000);
+					$(this).text('SlideUp');
+				} else {
+					$(this).prev().slideDown(1000);
+					$(this).text('SlideDown');
+				}
+			});
+			$('body').on('click', '#btntoggle2',  function(event) {
+				event.preventDefault();
+				$(this).prev().prev().slideToggle(1000);
+			});
+			$('body').on('click', '#btnstop',  function(event) {
+				event.preventDefault();
+				$(this).prev().prev().prev().stop();
+			});
+
+			$('body').on('click', '#btn3',  function(event) {
+				event.preventDefault();
+				if ($(this).text() == 'Fade Out') {
+					$(this).prev().fadeOut(1000);
+					$(this).text('Fade In');
+				} else {
+					$(this).prev().fadeIn(1000);
+					$(this).text('Fade Out');
+				}
+			});
+			$('body').on('click', '#btntoggle3', function(event) {
+				event.preventDefault();
+					$(this).prev().prev().fadeToggle(1000);
+			});
+			$('body').on('click', '#btnto',  function(event) {
+				event.preventDefault();
+				$(this).prev().prev().prev().fadeTo(1000, 0.5);
+			});
+		});
+	</script>
+</body>
+</html>

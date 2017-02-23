@@ -1,0 +1,64 @@
+div.forma {
+  background-color: #53a;
+  border-radius: 50%;
+  height: 100px;
+  margin: 200px auto;
+  width: 100px;
+  animation: 4s animForma infinite;
+}
+@-moz-keyframes animForma {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  25% {
+    transform: translateX(300px) translateY(0px);
+  }
+  50% {
+    transform: translateX(300px) translateY(300px);
+  }
+  75% {
+    transform: translateX(0px) translateY(300px);
+  }
+}
+@-webkit-keyframes animForma {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  25% {
+    transform: translateX(300px) translateY(0px);
+  }
+  50% {
+    transform: translateX(300px) translateY(300px);
+  }
+  75% {
+    transform: translateX(0px) translateY(300px);
+  }
+}
+@-o-keyframes animForma {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  25% {
+    transform: translateX(300px) translateY(0px);
+  }
+  50% {
+    transform: translateX(300px) translateY(300px);
+  }
+  75% {
+    transform: translateX(0px) translateY(300px);
+  }
+}
+@keyframes animForma {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  25% {
+    transform: translateX(300px) translateY(0px);
+  }
+  50% {
+    transform: translateX(300px) translateY(300px);
+  }
+  75% {
+    transform: translateX(0px) translateY(300px);
+  }
+}

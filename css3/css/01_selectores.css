@@ -1,0 +1,153 @@
+html {
+  font-size: 63.5%;
+}
+body {
+  background-color: #b8b3b3;
+  font: 1.6rem Arial;
+}
+fieldset {
+  border: none;
+  background-color: #fff;
+  margin: 20px auto;
+  width: 800px;
+}
+fieldset legend {
+  background-color: #e3e3e3;
+  color: #fff;
+  padding: 10px 40px;
+}
+fieldset legend h2 {
+  margin: 0px;
+  padding: 0px;
+}
+p~ul {
+  background-color: #e6bfbf;
+}
+a[href^=https] {
+  background-color: #e6bfbf;
+  border: 2px solid #e5bbbb;
+  color: #fff;
+  padding: 10px;
+}
+a[href$=pdf] {
+  background-color: #e6bfbf;
+  border: 2px solid #e5bbbb;
+  color: #fff;
+  padding: 10px;
+}
+a[href*=google] {
+  background-color: #e6bfbf;
+  border: 2px solid #e5bbbb;
+  color: #fff;
+  padding: 10px;
+}
+fieldset.first p:first-of-type {
+  background-color: #e6bfbf;
+  border: 2px solid #e5bbbb;
+  color: #fff;
+  padding: 10px;
+}
+fieldset.last p:last-of-type {
+  background-color: #e6bfbf;
+  border: 2px solid #e5bbbb;
+  color: #fff;
+  padding: 10px;
+}
+fieldset.only p:only-of-type {
+  background-color: #e6bfbf;
+  border: 2px solid #e5bbbb;
+  color: #fff;
+  padding: 10px;
+}
+fieldset.onlyc p:only-child {
+  background-color: #e6bfbf;
+  border: 2px solid #e5bbbb;
+  color: #fff;
+  padding: 10px;
+}
+fieldset.nc p:nth-child(3) {
+  background-color: #e6bfbf;
+  border: 2px solid #e5bbbb;
+  color: #fff;
+  padding: 10px;
+}
+fieldset.nlc p:nth-last-child(1) {
+  background-color: #e6bfbf;
+  border: 2px solid #e5bbbb;
+  color: #fff;
+  padding: 10px;
+}
+/*  */
+fieldset.not p:nth-of-type(2) {
+  background-color: #e6bfbf;
+  border: 2px solid #e5bbbb;
+  color: #fff;
+  padding: 10px;
+}
+fieldset.nlot p:nth-last-of-type(1) {
+  background-color: #e6bfbf;
+  border: 2px solid #e5bbbb;
+  color: #fff;
+  padding: 10px;
+}
+fieldset.lc p:last-child {
+  background-color: #e6bfbf;
+  border: 2px solid #e5bbbb;
+  color: #fff;
+  padding: 10px;
+}
+:root {
+  background: #e6bfbf;
+}
+fieldset.empty p:empty {
+  background-color: #e6bfbf;
+  border: 2px solid #e5bbbb;
+  color: #fff;
+  padding: 10px;
+}
+fieldset.target a[href*=destino],
+#destino1:target,
+#destino2:target,
+#destino3:target,
+#destino4:target {
+  background-color: #e6bfbf;
+  border: 2px solid #e5bbbb;
+  color: #fff;
+  padding: 10px;
+}
+input {
+  border: none;
+  padding: 10px;
+}
+input:enabled {
+  background-color: none;
+  border: 2px solid #e6bfbf;
+  color: #000;
+}
+input:disabled {
+  background-color: none;
+}
+input[type=checkbox] {
+  -webkit-appearance: none;
+  border: 1px solid #f00;
+  padding: 5px;
+}
+input:checked {
+  background-color: #e6bfbf;
+}
+.nt :not(p) {
+  background-color: #e6bfbf;
+  border: 2px solid #e5bbbb;
+  color: #fff;
+  padding: 10px;
+}
+.slt .color1::selection {
+  background-color: #faa;
+}
+.slt .color2::selection {
+  background-color: #d46a6a;
+}
+.slt .color3::selection {
+  background-color: #aa3939;
+  color: #fff;
+}

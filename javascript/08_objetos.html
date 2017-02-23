@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objetos JS</title>
+</head>
+<body>
+	<h1>Objetos</h1>
+	<hr>
+	<ul id="info"></ul>
+	<script>
+		var info = document.getElementById('info');
+
+		// Crear el objeto
+		var pokemon = {
+			nombre: 'Pikachu',
+			tipo: 'Eléctrico',
+			genero: 'Masculino',
+			atacar: function() {
+				return 'Trueno';
+			},
+			defender: function() {
+				return 'Campo Eléctrico';
+			},
+			evolucionar: function() {
+				this.nombre = 'Raichu';
+			}
+		}
+		// Acceso Atributos
+		info.innerHTML = '<li>'+pokemon.nombre+'</li>';
+		info.innerHTML += '<li>'+pokemon.tipo+'</li>';
+		info.innerHTML += '<li>'+pokemon.genero+'</li>';
+		// Acceso Métodos
+		info.innerHTML += '<li>'+pokemon.atacar()+'</li>';
+		info.innerHTML += '<li>'+pokemon.defender()+'</li>';
+		pokemon.evolucionar();
+		info.innerHTML += '<li>'+pokemon.nombre+'</li>';
+
+	</script>
+	</script>
+</body>
+</html>

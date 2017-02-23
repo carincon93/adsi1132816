@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Métodos Cadena JS</title>
+</head>
+<body>
+	<h1>Métodos Cadena JS</h1>
+	<hr>
+	<textarea id="cadena" cols="30" rows="10"></textarea>
+	<br>
+	Texto:
+	<output id="texto"></output>
+	<br>
+	<button id="btnLon">Longitud</button>
+	# Caracteres
+	<output id="longitud"></output>
+	<br>
+	<button id="btnMay">Mayúscula</button>
+	<button id="btnMin">Minúscula</button>
+	<br>
+	<input id="txtOri" type="text"> por
+	<input id="txtRem" type="text">
+	<button id="btnRem">Reemplazar</button>
+	<br>
+	<input type="number" id="posi"> a
+	<input type="number" id="posf">
+	<button id="btnCor">Cortar</button>
+
+	<script>
+		var cadena = document.getElementById('cadena');
+		var txtOri = document.getElementById('txtOri');
+		var txtRem = document.getElementById('txtRem');
+		var posi = document.getElementById('posi');
+		var posf = document.getElementById('posf');
+
+		var btnCor = document.getElementById('btnCor');
+
+		cadena.onkeyup = function() {
+			texto.value = this.value;
+			longitud.value = cadena.value.length;
+		}
+		
+		btnLon.onclick = function() {
+			longitud.value = cadena.value.length;
+		}
+		btnMay.onclick = function() {
+			texto.value = cadena.value.toUpperCase();
+		}
+		btnMin.onclick = function() {
+			texto.value = cadena.value.toLowerCase();
+		}
+		btnRem.onclick = function() {
+			texto.value = texto.value.replace(txtOri.value, txtRem.value);
+		}
+		btnCor.onclick = function() {
+			texto.value = cadena.value.substring(posi.value, posf.value);
+		}
+	</script>
+</body>
+</html>

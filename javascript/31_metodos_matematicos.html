@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Métodos Matemáticos JS</title>
+	<style>
+		figure img {
+			width: 400px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Métodos Matemáticos JS</h1>
+	<hr>
+	<h3>Números Aleatorios</h3>
+	<button id="btnAleatorio">Mostrar Número: ?</button>
+
+	<h3>Imágenes Aleatorias (5 imágenes)</h3>
+	<figure id="image" width="20%"></figure>
+	<button id="btnImagen">Mostrar Imágen</button>
+
+	<h3>Redondear Número</h3>
+	<input type="number" id="numero">
+	<button id="btnRedondear">Calcular</button>
+	<h3 id="resultado"></h3>
+
+	<h3>Número Máximo/Mínimo</h3>
+	El número máximo es: <output id="txtMax"></output>
+	<br>
+	El número mínimo es: <output id="txtMin"></output>
+
+	<script>
+		var btnAleatorio = document.getElementById('btnAleatorio');
+		var btnImagen = document.getElementById('btnImagen');
+
+		var image = document.getElementById('image');
+		var imagenes = ['imgs/vectorama1.png', 'imgs/vectorama2.png', 'imgs/vectorama3.png'];
+
+		btnAleatorio.onclick = function() {
+			var num = Math.round(Math.random()*100);
+
+			this.innerText = 'Mostrar Número: ' + num;
+		}
+
+		btnImagen.onclick = function() {
+			var ima = Math.floor(Math.random()*imagenes.length);
+			image.innerHTML = "<img src='"+imagenes[ima]+"'>";
+		}
+
+		btnRedondear.onclick = function() {
+			var num = Math.round(document.getElementById('numero').value);
+			resultado.innerHTML = num;
+		}
+
+	</script>
+</body>
+</html>

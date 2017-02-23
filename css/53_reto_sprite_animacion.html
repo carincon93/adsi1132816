@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Sprite Animación</title>
+	<link rel="stylesheet" href="css/53_reto_sprite_animacion.css">
+</head>
+<body>
+	<h1>Sprite Animación</h1>
+	<hr>
+	<section id="sprite" class="anim1"></section>
+
+	<script>
+		var sprite  = document.getElementById('sprite');
+		var na 	    = 1;
+		setInterval(function() {
+			//sprite.removeAttribute('class');
+			sprite.className = '';
+			sprite.classList.add('anim'+na);
+			if(na == 20) na = 1;
+			else na++;
+		}, 115);
+	</script>
+
+</body>
+</html>

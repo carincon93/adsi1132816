@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ciclos JS</title>
+</head>
+<body>
+	<h1>Ciclos JS</h1>
+	<hr>
+	<ul id="lista1"></ul>
+	<ul id="lista2"></ul>
+	<script>
+		var lista1 = document.getElementById('lista1');
+		var lista2 = document.getElementById('lista2');
+		var frutas = new Array('Manzana','Pera','Naranja', 'Guayaba', 'Sandia', 'Mandarina', 'Fresa', 'Mango', 'Coco');
+
+		// Forma larga
+		lista1.innerHTML = '<li>'+frutas[0]+'</li>';
+		lista1.innerHTML += '<li>'+frutas[1]+'</li>';
+		lista1.innerHTML += '<li>'+frutas[2]+'</li>';
+		lista1.innerHTML += '<li>'+frutas[3]+'</li>';
+		lista1.innerHTML += '<li>'+frutas[4]+'</li>';
+		lista1.innerHTML += '<li>'+frutas[5]+'</li>';
+		lista1.innerHTML += '<li>'+frutas[6]+'</li>';
+		lista1.innerHTML += '<li>'+frutas[7]+'</li>';
+		lista1.innerHTML += '<li>'+frutas[8]+'</li>';
+
+		// Forma corta
+		for (var i = 0; i <= frutas.length; i++) {
+			lista2.innerHTML += '<li>'+frutas+'</li>';
+		}
+	</script>
+</body>
+</html>

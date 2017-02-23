@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo Básico jQuery</title>
+</head>
+<body>
+	<h1>Ejemplo Básico jQuery</h1>
+	<hr>
+	<article>
+		<h1>Lista de Párrafos</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate odit facere quia dolor libero, magnam et iure, molestias blanditiis nobis 
+		fuga quasi quos sapiente, nam molestiae ipsa hic porro alias.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate odit facere quia dolor libero, magnam et iure, molestias blanditiis nobis fuga quasi quos sapiente, nam molestiae ipsa hic porro alias.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate odit facere quia dolor libero, magnam et iure, molestias blanditiis nobis fuga quasi quos sapiente, nam molestiae ipsa hic porro alias.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate odit facere quia dolor libero, magnam et iure, molestias blanditiis nobis fuga quasi quos sapiente, nam molestiae ipsa hic porro alias.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate odit facere quia dolor libero, magnam et iure, molestias blanditiis nobis fuga quasi quos sapiente, nam molestiae ipsa hic porro alias.</p>
+	</article>
+	<button>Eliminar Párrafo</button>
+	
+	<script src="js/jquery-3.1.1.js"></script>
+	<script>
+	$(document).ready(function() {
+		$('button').click(function(event) {
+			$('p').first().remove();
+		});
+	});
+	</script>
+</body>
+</html>

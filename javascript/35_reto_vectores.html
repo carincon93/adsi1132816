@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reto Vectores (JS)</title>
+	<style>
+		body { background-color: #917171;
+		margin: 0px }
+		section {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		nav ul {
+			display: flex;
+			justify-content: space-between;
+			padding: 0px;
+			width: 900px;
+		}
+		nav ul li {
+			display: inline-block;
+			height: 280px;
+			list-style: none;
+			width: 140px;
+			-webkit-transition: all 0.5s ease-in;
+		}
+
+		nav ul li.c1 {
+			background: rgba(0,0,0,.3) url() no-repeat center center;
+			background-size: contain; 
+		}
+		nav ul li.c2 {
+			background: rgba(0,0,0,.3) url() no-repeat center center;
+			background-size: contain; 
+		}
+		nav ul li.c3 {
+			background: rgba(0,0,0,.3) url() no-repeat center center;
+			background-size: contain; 
+		}
+		nav ul li.c4 {
+			background: rgba(0,0,0,.3) url() no-repeat center center;
+			background-size: contain; 
+		}
+		nav ul li.c5 {
+			background: rgba(0,0,0,.3) url() no-repeat center center;
+			background-size: contain; 
+		}
+		nav ul li.character:hover,
+		nav ul li.active {
+			background-color: #AF3131 ;
+			opacity: .5;
+			-webkit-transform: scale(1.1);
+		}
+		section {
+			display: flex;
+			justify-content: center;
+		}
+		ul#showvector li {
+			height: 80px;
+			list-style: none;
+			width: 80px;
+		}
+		ul#showvector li span {
+			background-color: rgba(255,255,255,.5);
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<nav>
+			<ul>
+				<li id="ch1" class="character c1"></li>
+				<li id="ch2" class="character c2"></li>
+				<li id="ch3" class="character c3"></li>
+				<li id="ch4" class="character c4"></li>
+				<li id="ch5" class="character c5"></li>
+			</ul>
+		</nav>
+	
+	
+		<h2>Configuración</h2>
+		<select id="position">
+			<option value="">Selecciones Posición</option>
+			<option value="1">Inicio</option>
+			<option value="2">Final</option>
+		</select>
+		<button id="add">Adicionar</button>
+		<button id="delete">Eliminar</button>
+	</section>
+	<ul id="showvector"></ul>
+	
+
+	<script>
+		var characters = document.getElementsByClassName('character');
+		var showvector = document.getElementById('showvector');
+		var cselected = null;
+		var position = null;
+		var btnadd = document.getElementById('add');
+		var btndelete = document.getElementById('delete');
+		var chvector = new Array();
+
+		for (var i = 0; i < characters.length; i++) {
+			characters[i].onclick = function() {
+				inactiveCharacters();
+				activeCharacter(this);
+			}
+		}
+		function inactiveCharacters() {
+			for (var i = 0; i < characters.length; i++) {
+				characters[i].classList.remove('active');
+			}
+		}
+		function activeCharacter(elem) {
+			elem.classList.add('active');
+			cselected = elem.getAttribute('id');
+		}
+		function validateInputs() {
+			position = document.getElementById('position').value;
+			if(cselected != null && position.length > 0) {
+				return true;
+			} else {
+				alert('Seleccione un personaje y una posición!');
+			}
+		}
+		function renderVector() {
+			showvector.innerHTML = "";
+			for (var i = 0; i < chvector.length; i++) {
+				showvector.innerHTML += "<li class='"+chvector[i]+"'><span>"+i+"</span></li>";
+			}
+		}
+		btnadd.onclick = function() {
+			if(validateInputs()) {
+				if (position == 1) {
+					chvector.unshift(cselected);
+				}
+				if (position == 2) {
+					chvector.push(cselected);
+				}
+				renderVector();			
+			}
+		}
+		btndelete.onclick = function() {
+			if(validateInputs()) {
+				if (position == 1) {
+					chvector.shift(cselected);
+				}
+				if (position == 2) {
+					chvector.pop(cselected);
+				}
+				renderVector();			
+			}
+		}		
+	</script>
+</body>
+</html>

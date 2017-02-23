@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ciclo (for)</title>
+</head>
+<body>
+	<h1>Ciclo (for)</h1>
+	<hr>
+	<fieldset>
+		<legend><h3>Constructor de Tablas HTML</h3></legend>
+		<input id="nf" type="number" placeholder="Número de Filas">
+		<br>
+		<input id="nc" type="number" placeholder="Número de Columnas">
+		<br>
+		<button id="btnc">Construir Tabla</button>
+	</fieldset>
+	<br>
+	<table id="tabla" border="1">
+		
+	</table>
+
+	<script>
+		var tabla = document.getElementById('tabla');
+		var btnc = document.getElementById('btnc');
+
+		btnc.onclick = function() {
+			var content = '';
+			var nf = document.getElementById('nf').value;
+			var nc = document.getElementById('nc').value;
+
+			for (var f = 1; f <= nf; f++) {
+				content += '<tr>';
+				for (var c = 1; c <= nc; c++) {
+					content += '<td>'+f+':'+c+'</td>';
+				}
+				content += '</tr>';
+			}
+			tabla.innerHTML = content;
+		}
+	</script>
+</body>
+</html>

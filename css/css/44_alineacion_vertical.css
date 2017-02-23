@@ -6,21 +6,28 @@ body {
 section#box {
   background-color: #fff;
   color: #777;
+  display: table;
+  height: 200px;
   margin: 20px auto;
   padding: 20px;
   width: 800px;
 }
 article {
   border: 2px solid #c0c0c0;
-  display: inline-block;
+  display: table;
   width: 258px;
 }
-article.baseline {
+article.baseline p {
+  display: table-cell;
   vertical-align: baseline;
 }
-article.top {
+article.top p {
+  display: table-cell;
   vertical-align: top;
 }
-article.middle {
+article.middle p {
+  display: table-cell;
   vertical-align: middle;
 }
+
+

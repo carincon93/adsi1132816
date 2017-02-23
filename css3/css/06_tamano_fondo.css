@@ -1,0 +1,23 @@
+section {
+    background: transparent url(../imgs/harley.jpg) no-repeat center center;
+    border: 4px solid #46ddf2;
+    height: 400px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 800px;
+}
+section h2 {
+    color: #296692;
+}
+section.fondo1 {
+    background-size: 100px;
+}
+section.fondo2 {
+    background-size: 50%;
+}
+section.fondo3 {
+    background-size: cover;
+}
+section.fondo4 {
+    background-size: contain;
+}

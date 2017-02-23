@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Arreglos Unidimensionales</title>
+</head>
+<body>
+	<h1>Arreglos Unidimensionales</h1>
+	<hr>
+	<ul id="lista1"></ul>
+	<ul id="lista2"></ul>
+
+	<script>
+		var l1 = document.getElementById('lista1');
+		var l2 = document.getElementById('lista2');
+
+		var frutas = new Array();
+		// Indices Manuales
+		frutas[0] = 'Papaya';
+		frutas[1] = 'Guanabana';
+		frutas[2] = 'Chirimolla';
+		frutas[3] = 'Borojo';
+		// Llenamos la lista
+		l1.innerHTML = '<li>'+frutas[0]+'</li>';
+
+		// forma condensada
+		// Indices Automáticos
+		var deportes = new Array('Fútbol', 'Baloncesto', 'Tenis');
+		// Llenamos la Lista 2
+		l2 .innerHTML = '<li>'+deportes+'</li>';
+
+		
+		// forma literal
+		var ciudades = ['Manizales', 'Pereira', 'Armenia'];
+	</script>
+</body>
+</html>

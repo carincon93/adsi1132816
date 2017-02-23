@@ -1,0 +1,67 @@
+section#sprite {
+  background: transparent url("../imgs/metal.png") no-repeat;
+  border: 2px solid #ddd;
+  height: 40px;
+  margin: 18px auto;
+  width: 53px;
+}
+section#sprite.anim1 {
+  background-position: -2px -1px;
+}
+section#sprite.anim2 {
+  background-position: -56px -1px;
+}
+section#sprite.anim3 {
+  background-position: -112px -1px;
+}
+section#sprite.anim4 {
+  background-position: -165px -1px;
+}
+section#sprite.anim5 {
+  background-position: -218px -1px;
+}
+section#sprite.anim6 {
+  background-position: -271px -1px;
+}
+section#sprite.anim7 {
+  background-position: -324px -1px;
+}
+section#sprite.anim8 {
+  background-position: -380px -1px;
+}
+section#sprite.anim9 {
+  background-position: -433px -1px;
+}
+section#sprite.anim10 {
+  background-position: -486px -1px;
+}
+section#sprite.anim11 {
+  background-position: -2px -41px;
+}
+section#sprite.anim12 {
+  background-position: -56px -41px;
+}
+section#sprite.anim13 {
+  background-position: -112px -41px;
+}
+section#sprite.anim14 {
+  background-position: -165px -41px;
+}
+section#sprite.anim15 {
+  background-position: -218px -41px;
+}
+section#sprite.anim16 {
+  background-position: -271px -41px;
+}
+section#sprite.anim17 {
+  background-position: -324px -41px;
+}
+section#sprite.anim18 {
+  background-position: -380px -41px;
+}
+section#sprite.anim19 {
+  background-position: -433px -41px;
+}
+section#sprite.anim20 {
+  background-position: -486px -41px;
+}
