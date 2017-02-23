@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Galeria (OWl Carousel jQuery)</title>
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+</head>
+<body>
+	<h1>Galeria (OWl Carousel jQuery)</h1>
+	<hr>
+	<section class="owl-carousel owl-theme">
+		<img src="imgs/slider1.jpg" alt="">
+		<img src="imgs/slider2.jpg" alt="">
+		<img src="imgs/slider3.jpg" alt="">
+		<img src="imgs/slider4.jpg" alt="">
+		<img src="imgs/slider5.jpg" alt="">
+	</section>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$('.owl-carousel').owlCarousel({
+			    loop:true,
+			    margin:10,
+			    responsiveClass:true,
+			    responsive:{
+			        0:{
+			            items:1,
+			            nav:true
+			        },
+			        600:{
+			            items:1,
+			            nav:false
+			        },
+			        1000:{
+			            items:1,
+			            nav:true,
+			            loop:false
+			        }
+			    }
+			})
+		});		
+	</script>
+
+</body>
+</html>
