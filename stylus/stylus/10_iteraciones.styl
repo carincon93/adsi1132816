@@ -1,0 +1,19 @@
+
+// Variable colores
+colores = red green blue yellow fuchsia aqua orange pink 
+
+ul.colores
+	li
+		font 1.4em Tahoma
+		padding 10px
+		width 200px
+		margin-bottom 4px
+		list-style none
+		transition all 0.5s
+	for color, i in colores
+		li:nth-child({i+1})
+			color color
+			background-color darken(color, 50%)
+		li:nth-child({i+1}):hover
+			background-color: lightness(color, 80%)
+			cursor pointer

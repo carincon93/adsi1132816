@@ -1,33 +1,107 @@
 body
-	background-color #79DEC7
-	font 16px Arial
-	padding 0px
-	margin 0px
+    background-color #e82231
+    font 16px Arial
+    padding 0px
+    margin 0px
+
 header
-	background-color #fff
-	height 120px
-	margin 0px
-header figure.logo
-	background #fff url(../imgs/sprite-web.png) no-repeat
-	background-position 0px 0px
-	height 90px
-	margin 0px
-	width 244px
+    border-bottom 4px solid rgba(0,0,0,0.2)
+    background-color #fff
+    padding 10px
+    margin 0px
+    height 100px
+    figure
+        &.logo
+            background #fff url("../imgs/sprite-web.png") no-repeat
+            background-position -272px -34px
+            height 90px
+            margin 0px
+            width 244px
+
 nav
-	position relative
-	left 600px
-	top -40px
-	
-nav li
-	background-color
-	color #fff
-	display inline-block
-	vertical-align top
-	margin-left 12px
-	padding 10px 40px
-	text-align center
-	width 120px
-nav li
+    position relative
+    left 360px
+    top -70px
+    width 880px
+    li
+        background-color #e82231
+        border-bottom 4px solid rgba(0,0,0,0.2)
+        color #fff
+        display inline-block
+        vertical-align top
+        margin-left 12px
+        padding 20px 40px
+        text-align center
+        width 120px
+        &:hover
+            background-color #b81824
+            border-bottom 4px solid #e82231
+            cursor pointer
+            color #000
+
+section
+    margin 20px auto
+    padding 10px
+    width 1024px
+    aside
+        display inline-block
+        vertical-align top
+        &.cleft
+            width 640px
+            article
+                background-color #fff
+                padding 10px
+                margin-bottom 4px
+                h3
+                    border-bottom 2px solid #e82231
+                    color #e82231
+                    font-size 1.5em
+                p
+                    text-align justify
+                    &::first-letter
+                        color #e82231
+                        font-size 1.5em
+                figure
+                    &.box
+                        background #fff url("../imgs/sprite-web.png") no-repeat
+                        background-position -24px -262px
+                        height 210px
+                        width 470px
+        &.cright
+            width 360px
+            ul
+                &.years
+                    list-style none
+                    margin 0px
+                    li
+                        background-color #fff
+                        padding 20px 10px
+                        margin-bottom 21px
+                        span
+                            &.icon
+                                background #000 url("../imgs/sprite-web.png") no-repeat
+                                background-position -362px -140px
+                                display inline-block
+                                height 90px
+                                width 90px
+                        em
+                            display inline-block
+                            position relative
+                            left 10px
+                            top -38px
+
+footer
+    background-color #000
+    color #fff
+    padding 10px
+    text-align center
+    figure
+        &.logodark
+            background #000 url("../imgs/sprite-web.png") no-repeat
+            background-position -24px -478px
+            margin 10px auto
+            height 110px
+            width 470px
 	
 	
 	
