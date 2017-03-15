@@ -35,3 +35,42 @@ SELECT * FROM nombretabla WHERE nombrecolumna1 = valor1 AND nombrecolumna1 = val
 #Ordenar
 SELECT * FROM nombretabla ORDER BY nombrecolumna ASC;
 SELECT * FROM nombretabla ORDER BY nombrecolumna DESC;
+
+#Límite de registros
+SELECT * FROM nombretabla LIMIT numero;
+
+#Paginación de registros
+SELECT * FROM nombretabla LIMIT numeroregistros OFFSET numeroinicia;
+
+#Buscar registros (LIKE)
+SELECT * FROM nombretabla WHERE nombrecolumna LIKE "%cadena%";
+
+#Buscar al inicio
+SELECT * FROM nombretabla WHERE nombrecolumna LIKE "$cadena";
+
+#Buscar - Completando caracteres
+SELECT * FROM nombretabla WHERE nombrecolumna LIKE	"c_d_n";
+
+#Buscar (Negación)
+SELECT * FROM nombretabla WHERE nombrecolumna NOT LIKE	"%cadena%";
+
+#Múltiples valores en una columna (IN)
+SELECT * FROM nombretabla WHERE nombrecolumna IN(valor1, valor2, valor3);
+
+#Entre (Inicial - Final) (BETWEEN)
+SELECT * FROM nombretabla WHERE nombrecolumna BETWEEN valor1 AND valor2;
+
+#Entre (Negación)
+SELECT * FROM nombretabla WHERE nombrecolumna NOT BETWEEN valor1 AND valor2;
+
+#Alias (2 Tablas Relacionadas)
+SELECT alias1.nombrecolumna, alias2.nombrecolumna FROM nombretabla1 AS alias1, nombretabla2 AS alias2 WHERE alias2.nombrecolumna = alias1.nombrecolumna AND alias2.nombrecolumna = alias1.nombrecolumna;
+
+#INNER JOIN
+SELECT alias1.nombrecolumna, alias2.nombrecolumna FROM nombretabla AS alias1 INNER JOIN nombretabla2 AS alias2 ON alias2.nombrecolumna = alias1.nombrecolumna;
+
+SELECT alias1.nombrecolumna, alias2.nombrecolumna FROM nombretabla AS alias1 LEFT JOIN nombretabla2 AS alias2 ON alias2.nombrecolumna = alias1.nombrecolumna;
+
+
+
+
