@@ -8,7 +8,7 @@ SELECT nombrecolumna FROM nombretabla;
 SELECT nombrecolumna1, nombrecolumna2 FROM nombretabla;
 
 #Seleccionar valores distintos de una columna
-SELECT distinct nombrecolumna FROM nombretabla;
+SELECT DISTINCT nombrecolumna FROM nombretabla;
 
 #Seleccionar registros con condición
 SELECT * FROM nombretabla WHERE nombrecolumna = valor;
@@ -69,7 +69,14 @@ SELECT alias1.nombrecolumna, alias2.nombrecolumna FROM nombretabla1 AS alias1, n
 #INNER JOIN
 SELECT alias1.nombrecolumna, alias2.nombrecolumna FROM nombretabla AS alias1 INNER JOIN nombretabla2 AS alias2 ON alias2.nombrecolumna = alias1.nombrecolumna;
 
+#LEFT JOIN
 SELECT alias1.nombrecolumna, alias2.nombrecolumna FROM nombretabla AS alias1 LEFT JOIN nombretabla2 AS alias2 ON alias2.nombrecolumna = alias1.nombrecolumna;
+
+#RIGHT JOIN
+SELECT alias1.nombrecolumna, alias2.nombrecolumna FROM nombretabla AS alias1 RIGHT JOIN nombretabla2 AS alias2 ON alias2.nombrecolumna = alias1.nombrecolumna;
+
+#UNION (Unir la consulta de 2 o más tablas)
+SELECT nombrecolumna1 FROM nombretabla1 UNION SELECT nombrecolumna2 FROM nombretabla2;
 
 
 
