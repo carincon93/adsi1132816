@@ -14,38 +14,52 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
-          <h1 class="text-center">Adicionar Avatar</h1>
+          <h1 class="text-center">Editar Avatar</h1>
           <hr>
           <ol class="breadcrumb">
       		<li><a href="index.php">Inicio</a></li>
-      		<li class="active">Adicionar Avatar</li>
+      		<li class="active">Editar Avatar</li>
       	</ol>
+        <?php if (isset($_GET['id'])): ?>
+          <?php 
+            include 'includes/db.php';
+            $id = $_GET['id'];
+            $sql = "SELECT * FROM avatars WHERE id = $id";
+            $result = mysqli_query($con, $sql);
+            while ($row = mysqli_fetch_array($result)):
+          ?>    
           <form action="" method="POST" id="add" enctype="multipart/form-data">
           	<div class="form-group">
-          		<input type="text" class="form-control" name="name" data-validation="required" placeholder="Nombre">
+          		<input type="text" class="form-control" name="name" data-validation="required" placeholder="Nombre" value="<?= $row['name']?>">
           	</div>
           	<div class="form-group">
           		<select name="gender" class="form-control" data-validation="required">
           			<option value>Genero...</option>
-          			<option value="Masculino">Masculino</option>
-          			<option value="Femenino">Femenino</option>
+          			<option value="Masculino" <?php if($row['gender'] == 'Masculino') echo "Selected"; ?>>Masculino</option>
+          			<option value="Femenino" <?php if($row['gender'] == 'Femenino') echo "Selected"; ?>>Femenino</option>
           		</select>
           	</div>
           	<div class="form-group">
-              <img id="avatar" src="public/imgs/avatar.png">
+              <img id="avatar" src="<?= $row['image'] ?>">
           		<button class="btn btn-default btn-upload" type="button">
           			<i class="glyphicon glyphicon-user"></i>Cargar foto
           		</button>
           		<input type="file" id="upload" name="image" accept="image/*" style="display: none">
           	</div>
           	<div class="form-group">
-          		<input type="color" name="color" placeholder="Color" data-validation="required">
+          		<input type="color" name="color" placeholder="Color" data-validation="required" value="<?= $row['color'] ?>">
           	</div>
           	<div class="form-group">
-          		<button type="submit" class="btn btn-success">Enviar</button>
-          		<button type="reset" class="btn">Limpiar</button>
+          		<button type="submit" class="btn btn-success">Modificar</button>
+          		<button type="reset" class="btn">Restablecer</button>
           	</div>
           </form>
+          <?php 
+            endwhile;
+            mysqli_close($con); 
+          ?>
+        <?php endif ?>
+
           <?php 
             include 'includes/db.php'; 
             if ($_FILES) {
@@ -59,13 +73,13 @@
 
               if (!empty($_FILES['image']['name'])) {
                 move_uploaded_file($_FILES['image']['tmp_name'], $image);
-                $sql = "INSERT INTO avatars VALUES (DEFAULT, '$name', '$gender', '$image', '$color')";
+                $sql = "UPDATE avatars SET name = '$name', gender = '$gender', image = '$image', color = '$color' WHERE id = $id";
               } else {
-                $sql = "INSERT INTO avatars VALUES (DEFAULT, '$name', '$gender', DEFAULT, '$color')";
+                $sql = "UPDATE avatars SET name = '$name', gender = '$gender', color = '$color' WHERE id = $id";
               }
               
               if (mysqli_query($con, $sql)) {
-                $_SESSION['action'] = 'Add';
+                $_SESSION['action'] = 'Edit';
                echo "<script>window.location.replace('index.php');</script>"; 
               }
             }
