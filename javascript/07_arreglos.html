@@ -9,10 +9,14 @@
 	<hr>
 	<ul id="lista1"></ul>
 	<ul id="lista2"></ul>
+	<ul id="lista3"></ul>
+
 
 	<script>
 		var l1 = document.getElementById('lista1');
 		var l2 = document.getElementById('lista2');
+		var l3 = document.getElementById('lista3');
+
 
 		var frutas = new Array();
 		// Indices Manuales
@@ -32,6 +36,9 @@
 		
 		// forma literal
 		var ciudades = ['Manizales', 'Pereira', 'Armenia'];
+
+		// Llenamos la Lista 2
+		l3.innerHTML = '<li>'+ciudades[0]+'</li><li>'+ciudades[1]+'</li><li>'+ciudades[2]+'</li>';
 	</script>
 </body>
 </html>
