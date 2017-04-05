@@ -1,13 +1,9 @@
-<?php 
+<?php
+	$base_url = 'http://localhost/adsi1132816/pdo/';
 	if (!isset($_SESSION['urol'])) {
-		echo "<script>
-				alert('Acceso denegado!');
-				window.location.replace('index.php');
-			</script>";
+			header("location:".$base_url."index.php");
 	} else {
 		if ($_SESSION['urol'] == 'cliente') {
-			echo "<script>alert('Acceso Denegado!');
-					window.location.replace('index.php');
-				</script>";
+			header("location:".$base_url."index.php");
 		}
 	}

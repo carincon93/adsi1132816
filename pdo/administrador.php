@@ -8,12 +8,29 @@
 
 <div class="container-fluid dashboard">
 	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
+		<div class="col-md-6 col-md-offset-3 text-center">
 			<h1>Bienvenido <?= $_SESSION['unombres'] ?></h1>
 			<hr>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, hic sapiente officiis voluptatum dicta a, quis quam minima cum quisquam tempore beatae veniam ea corrupti, repellendus fugit. Perspiciatis praesentium ut eum nobis nihil tenetur quis magnam nemo placeat inventore quasi quos quibusdam omnis reiciendis, officiis tempore porro sunt vel aspernatur perferendis nisi architecto illum neque illo excepturi! Facilis iusto eum dolores voluptates impedit distinctio enim, quo mollitia excepturi blanditiis molestiae dolor officiis, asperiores voluptatum tempora nam quos laudantium quam fuga, eius modi assumenda expedita praesentium. Eveniet, ullam dolor! Ratione illo harum maiores iusto nostrum exercitationem, ducimus voluptatibus alias nihil nesciunt.
-			</p>
+			<ul class="nav nav-pills nav-pills-primary block-center">
+				<li>
+					<a href="admin/articles/">
+						<i class="material-icons">card_giftcard</i>
+						Artículos
+					</a>
+				</li>
+				<li>
+					<a href="admin/customers/">
+						<i class="material-icons">supervisor_account</i>
+						Clientes
+					</a>
+				</li>
+				<li>
+					<a href="admin/sales/">
+						<i class="material-icons">shopping_cart</i>
+						Ventas
+					</a>
+				</li>
+			</ul>				
 		</div>
 	</div>
 </div>

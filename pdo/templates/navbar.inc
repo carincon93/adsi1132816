@@ -23,7 +23,7 @@
 				<ul class="dropdown-menu">
 					<li><a href="#">Mis datos</a></li>
 					<li><a href="#">Mis compras</a></li>
-					<li><a href="exit.php">Cerrar sesión</a></li>
+					<li><a href="<?= $base_url ?>exit.php">Cerrar sesión</a></li>
 				</ul>			
 			</li>
 
