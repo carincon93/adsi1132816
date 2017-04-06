@@ -22,7 +22,11 @@
 				</a>
 				<ul class="dropdown-menu">
 					<li><a href="#">Mis datos</a></li>
-					<li><a href="#">Mis compras</a></li>
+					<?php if($_SESSION['urol'] == 'cliente'): ?>
+						<li><a href="#">Mis compras</a></li>
+							<?php else: ?>
+								<li><a href="#">Mis ventas</a></li>
+					<?php endif ?>
 					<li><a href="<?= $base_url ?>exit.php">Cerrar sesión</a></li>
 				</ul>			
 			</li>
