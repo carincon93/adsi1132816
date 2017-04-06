@@ -72,3 +72,57 @@
 			
 		}
 	}
+	//Consultar un artículo
+	function showArticle($con, $id) {
+		try {
+			$stm = $con->prepare("SELECT * FROM articulos WHERE id = :id");
+			$stm->bindparam(':id', $id);
+			$stm->execute();
+			return $stm->fetchAll();			
+		} catch (PDOException $e) {
+			echo $e->getMessage();	
+		}
+	}
+	//Modificar artículo
+	function updateArticle($con, $id, $nombre, $precio, $imagen = 'default') {
+		try {
+			if ($imagen == 'default') {
+				$sql = "UPDATE articulos SET nombre = :nombre, precio = :precio WHERE id = :id";
+				$stm = $con->prepare($sql);
+				$stm->bindparam(':nombre', $nombre);
+				$stm->bindparam(':precio', $precio);
+				$stm->bindparam(':id', $id);				
+			} else {
+				$sql = "UPDATE articulos SET nombre = :nombre, precio = :precio, imagen = :imagen WHERE id = :id";
+				$stm = $con->prepare($sql);
+				$stm->bindparam(':nombre', $nombre);
+				$stm->bindparam(':precio', $precio);
+				$stm->bindparam(':imagen', $imagen);
+				$stm->bindparam(':id', $id);
+			}
+
+			if ($stm->execute()) {
+				$_SESSION['message_action'] = 'El artículo se modificó con éxito!';
+				header('location: index.php');
+			} else {
+				header('location: index.php');
+			}
+			
+			
+		} catch (Exception $e) {
+			
+		}
+	}
+	// Eliminar artículo
+	function deleteArticle($con, $id) {
+		try {
+			$stm = $con->prepare("DELETE FROM articulos WHERE id = :id");
+			$stm->bindparam(':id', $id);
+			if ($stm->execute()) {
+				$_SESSION['message_action'] = 'El artículo se eliminó con éxito!';
+				header('location: index.php');
+			}		
+		} catch (PDOException $e) {
+			echo $e->getMessage();	
+		}
+	}

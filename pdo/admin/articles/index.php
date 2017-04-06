@@ -51,7 +51,7 @@
 							<td>
 								<a href="show.php?id=<?= $article['id'] ?>" class="btn btn-xs btn-simple"><i class="material-icons">search</i></a>
 								<a href="edit.php?id=<?= $article['id'] ?>" class="btn btn-xs btn-simple"><i class="material-icons">edit</i></a>
-								<a href="" class="btn btn-xs btn-simple"><i class="material-icons">delete</i></a>
+								<button class="btn btn-xs btn-simple btn-delete" data-delete="<?= $article['id']?>"><i class="material-icons">delete</i></button>
 							</td>
 						</tr>
 					<?php endforeach ?>

@@ -8,12 +8,24 @@
 
 <div class="container-fluid dashboard">
 	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
+		<div class="col-md-10 col-md-offset-1">
 			<h1>Bienvenido <?= $_SESSION['unombres'] ?></h1>
 			<hr>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, hic sapiente officiis voluptatum dicta a, quis quam minima cum quisquam tempore beatae veniam ea corrupti, repellendus fugit. Perspiciatis praesentium ut eum nobis nihil tenetur quis magnam nemo placeat inventore quasi quos quibusdam omnis reiciendis, officiis tempore porro sunt vel aspernatur perferendis nisi architecto illum neque illo excepturi! Facilis iusto eum dolores voluptates impedit distinctio enim, quo mollitia excepturi blanditiis molestiae dolor officiis, asperiores voluptatum tempora nam quos laudantium quam fuga, eius modi assumenda expedita praesentium. Eveniet, ullam dolor! Ratione illo harum maiores iusto nostrum exercitationem, ducimus voluptatibus alias nihil nesciunt.
-			</p>
+			<?php $articles = showArticles($con); ?>
+			<div class="row">
+				<?php foreach ($articles as $key => $article): ?>
+				<div class="thumbnail col-md-4">
+					<img src="<?= $base_url.$article['imagen'] ?>" width="200px">
+					<div class="caption">
+						<h3><?= $article['nombre']?></h3>
+						<p><?= $article['precio'] ?></p>
+						<p>
+							<a href="#" class="btn btn-primary" role="button"><i class="material-icons">shopping_cart</i> Agregar</a>
+						</p>
+					</div>
+				</div>		
+				<?php endforeach ?>				
+			</div>
 		</div>
 	</div>
 </div>

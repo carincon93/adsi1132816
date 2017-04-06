@@ -20,6 +20,12 @@
           form: '#frm',
           language: es
         });
+        $('.btn-delete').click(function(event) {
+          if (confirm('Realmente desea eliminar este avatar?')) {
+            $id = $(this).attr('data-delete');
+            window.location.replace('delete.php?id='+$id);
+          }
+        });
     });
 </script>
 	
