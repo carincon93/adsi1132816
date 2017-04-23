@@ -18,8 +18,8 @@
 			  <?php 
 	  			if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-		  			$correo = $_POST['correo'];
-		  			$contrasena = md5($_POST['contrasena']);
+		  			$correo 	= $_POST['correo'];
+		  			$contrasena = $_POST['contrasena'];
 
 					if(login($con, $correo, $contrasena)) {
 

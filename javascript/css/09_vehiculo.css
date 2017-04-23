@@ -1,7 +1,3 @@
-body {
-	
-}
-
 ul#info {
 	background-color: #347D94;
 	color: #dddcc5;
@@ -18,9 +14,6 @@ ul#info li:first-child {
 }
 li#eimagen img {
 	height: 400px;
-}
-div#vhcl img {
-	transform: rotateY(180deg);
 }
 
 .arrancar img {

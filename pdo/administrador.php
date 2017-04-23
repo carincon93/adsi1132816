@@ -11,20 +11,20 @@
 		<div class="col-md-6 col-md-offset-3 text-center">
 			<h1>Bienvenido <?= $_SESSION['unombres'] ?></h1>
 			<hr>
-			<ul class="nav nav-pills nav-pills-primary block-center">
-				<li>
+			<ul class="nav nav-pills nav-pills-primary block-center row">
+				<li class="col-md-4">
 					<a href="admin/articles/">
 						<i class="material-icons">card_giftcard</i>
 						Artículos
 					</a>
 				</li>
-				<li>
+				<li class="col-md-4">
 					<a href="admin/customers/">
 						<i class="material-icons">supervisor_account</i>
 						Clientes
 					</a>
 				</li>
-				<li>
+				<li class="col-md-4">
 					<a href="admin/sales/">
 						<i class="material-icons">shopping_cart</i>
 						Ventas

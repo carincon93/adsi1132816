@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="<?=$assets_css?>bootstrap.min.css">
 	<link rel="stylesheet" href="<?=$assets_css?>material-kit.css">
 	<link rel="stylesheet" href="<?=$assets_css?>material-icons.css">
+	<link rel="stylesheet" href="<?=$assets_css?>animate.css">
 	<link rel="stylesheet" href="<?=$assets_css?>custom.css">
 
 

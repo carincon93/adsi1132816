@@ -10,7 +10,7 @@
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 			<ol class="breadcrumb">
-	      		<li><a href="../../">Menú Principal</a></li>
+	      		<li><a href="<?=$base_url?>administrador.php">Menú Principal</a></li>
 	      		<li><a href="index.php">Módulo Artículo</a></li>
 	      		<li class="active">Adicionar Artículo</li>
 	      	</ol>

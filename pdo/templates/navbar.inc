@@ -6,10 +6,19 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a href="<?= $base_url; ?>" class="navbar-brand">Inicio</a>
+		<?php if($_SESSION['urol'] == 'administrador'):?>
+			<a href="<?= $base_url ?>administrador.php" class="navbar-brand">Inicio</a>
+		<?php else:?>
+			<a href="<?= $base_url ?>cliente.php" class="navbar-brand">Inicio</a>
+		<?php endif?>
 	</div>
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav navbar-right">
+			<?php if($_SESSION['urol'] == 'cliente'): ?>			
+			<li class="shopping-nav">
+				<a href="#"><i class="material-icons animated">shopping_cart</i></a>
+			</li>
+			<?php endif; ?>
 			<li class="active">
 				<a href="" class="text-capitalize">
 					<?= $_SESSION['urol'] ?>
@@ -23,9 +32,9 @@
 				<ul class="dropdown-menu">
 					<li><a href="#">Mis datos</a></li>
 					<?php if($_SESSION['urol'] == 'cliente'): ?>
-						<li><a href="#">Mis compras</a></li>
+						<li><a href="<?= $base_url ?>customer/history.php">Mis compras</a></li>
 							<?php else: ?>
-								<li><a href="#">Mis ventas</a></li>
+								<li><a href="<?= $base_url ?>admin/sales/">Mis ventas</a></li>
 					<?php endif ?>
 					<li><a href="<?= $base_url ?>exit.php">Cerrar sesión</a></li>
 				</ul>			

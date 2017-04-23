@@ -10,16 +10,11 @@
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 			<ol class="breadcrumb">
-	      		<li><a href="<?=$base_url?>administrador.php">Menú Principal</a></li>
-	      		<li class="active">Módulo Artículo</li>
+	      		<li><a href="<?=$base_url?>cliente.php">Menú Principal</a></li>
+	      		<li class="active">Módulo de Total Ventas</li>
 	      	</ol>
-			<h4 class="text-uppercase">Módulo de Artículos</h4>
+			<h4 class="text-uppercase">Módulo de Total Ventas</h4>
 			<hr>
-			<a href="add.php" class="btn btn-success">
-				<i class="material-icons">add</i>
-				Adicionar Artículo
-			</a>
-			<br>
 			<?php if (isset($_SESSION['message_action'])): ?>				
 			<div class="alert alert-success">
 			    <div class="container-fluid">
@@ -35,28 +30,30 @@
 				<?php unset($_SESSION['message_action']); ?>
 			<?php endif ?>
 			<table class="table table-hover">
+				<caption>
+					<?php $total = total($con) ?>
+					<?php foreach ($total as $key => $value): ?>
+						<span>Total vendido: $<?= number_format($value) ?> COP</span>
+					<?php endforeach ?>					
+				</caption>
 				<thead>
-					<th>ID</th>
-					<th>Nombre</th>
+					<th>#</th>
+					<th>Nombre Producto</th>
 					<th>Precio</th>
-					<th>Acciones</th>
+					<th>Comprador</th>
 				</thead>
 				<tbody>
-					<?php $articles = showArticles($con); ?>
-					<?php foreach ($articles as $key => $article): ?>
+					<?php $count = 0 ?>
+					<?php $products = showTotalHistory($con); ?>
+					<?php foreach ($products as $key => $product): ?>
 						<tr>
-							<td><?= $article['id']?></td>
-							<td><?= $article['nombre']?></td>
-							<td>$ <?= number_format($article['precio'])?></td>
-							<td>
-								<a href="show.php?id=<?= $article['id'] ?>" class="btn btn-xs btn-simple"><i class="material-icons">search</i></a>
-								<a href="edit.php?id=<?= $article['id'] ?>" class="btn btn-xs btn-simple"><i class="material-icons">edit</i></a>
-								<button class="btn btn-xs btn-simple btn-delete" data-delete="<?= $article['id']?>"><i class="material-icons">delete</i></button>
-							</td>
+							<td><?= ++$count ?></td>
+							<td><?= $product['nombre']?></td>
+							<td>$<?= number_format($product['precio'])?></td>
+							<td><?= $product['nombres']?></td>
 						</tr>
 					<?php endforeach ?>
 				</tbody>
-
 			</table>
 
 		</div>

@@ -11,13 +11,13 @@
 		<div class="col-md-6 col-md-offset-3">
 			<ol class="breadcrumb">
 	      		<li><a href="<?=$base_url?>administrador.php">Menú Principal</a></li>
-	      		<li class="active">Módulo Artículo</li>
+	      		<li class="active">Módulo Cliente</li>
 	      	</ol>
-			<h4 class="text-uppercase">Módulo de Artículos</h4>
+			<h4 class="text-uppercase">Módulo de Clientes</h4>
 			<hr>
 			<a href="add.php" class="btn btn-success">
 				<i class="material-icons">add</i>
-				Adicionar Artículo
+				Adicionar Cliente
 			</a>
 			<br>
 			<?php if (isset($_SESSION['message_action'])): ?>				
@@ -29,7 +29,7 @@
 				  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					<span aria-hidden="true"><i class="material-icons">clear</i></span>
 				  </button>
-			      <b>Aviso: </b><?= $_SESSION['message_action'] ?>
+			      <b>Aviso:</b><?= $_SESSION['message_action'] ?>
 			    </div>
 			</div>
 				<?php unset($_SESSION['message_action']); ?>
@@ -37,21 +37,21 @@
 			<table class="table table-hover">
 				<thead>
 					<th>ID</th>
-					<th>Nombre</th>
-					<th>Precio</th>
+					<th>Nombres</th>
+					<th>Correo</th>
 					<th>Acciones</th>
 				</thead>
 				<tbody>
-					<?php $articles = showArticles($con); ?>
-					<?php foreach ($articles as $key => $article): ?>
+					<?php $customers = showCustomers($con); ?>
+					<?php foreach ($customers as $key => $customer): ?>
 						<tr>
-							<td><?= $article['id']?></td>
-							<td><?= $article['nombre']?></td>
-							<td>$ <?= number_format($article['precio'])?></td>
+							<td><?= $customer['id']?></td>
+							<td><?= $customer['nombres']?></td>
+							<td><?= $customer['correo']?></td>
 							<td>
-								<a href="show.php?id=<?= $article['id'] ?>" class="btn btn-xs btn-simple"><i class="material-icons">search</i></a>
-								<a href="edit.php?id=<?= $article['id'] ?>" class="btn btn-xs btn-simple"><i class="material-icons">edit</i></a>
-								<button class="btn btn-xs btn-simple btn-delete" data-delete="<?= $article['id']?>"><i class="material-icons">delete</i></button>
+								<a href="show.php?id=<?= $customer['id'] ?>" class="btn btn-xs btn-simple"><i class="material-icons">search</i></a>
+								<a href="edit.php?id=<?= $customer['id'] ?>" class="btn btn-xs btn-simple"><i class="material-icons">edit</i></a>
+								<button class="btn btn-xs btn-simple btn-delete" data-delete="<?= $customer['id']?>"><i class="material-icons">delete</i></button>
 							</td>
 						</tr>
 					<?php endforeach ?>
