@@ -1,0 +1,11 @@
+	cd adsi1132816
+	mkdir sass-bootstrap
+	cd sass-bootstrap
+
+	npm install -g bower
+	npm install -g live-server
+	bower install bootsrap-sass --save
+	bower install fontawesome --save
+	live-server --port=8000
+
+Koala Output Style: expanded
