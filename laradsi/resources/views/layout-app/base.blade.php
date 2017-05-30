@@ -15,5 +15,16 @@
 
 	<script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
 	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+  <script>
+    $(document).ready(function() {
+      $('form').on('click', '.btn-delete', function(event) {
+        event.preventDefault();
+        if (confirm("Realmente desea eliminar este elemento?")) {
+          $(this).parent().submit();
+
+        }
+      });
+    });
+  </script>
   </body>
 </html>

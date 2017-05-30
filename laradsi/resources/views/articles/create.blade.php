@@ -8,8 +8,8 @@
 			<h1></h1>
 			<hr>
 			<ul class="breadcrumb">
-				<li><a href="{{ url('category/') }}">Lista Categorías</a></li>
-				<li class="active">Adicionar Categoría</li>
+				<li><a href="{{ url('article/') }}">Lista Artículos</a></li>
+				<li class="active">Adicionar Artículo</li>
 			</ul>
 			<hr>
 			@if(!$errors->isEmpty())
@@ -22,10 +22,17 @@
 					</div>
 				@endforeach
 			@endif
-			<form action="{{ url('category') }}" method="POST">
+			<form action="{{ url('article') }}" method="POST">
 				{!! csrf_field() !!}
 				<div class="form-group">
 					<input type="text" name="name" class="form-control" placeholder="Nombre">
+					<input type="file" name="image" class="form-control" placeholder="Nombre">
+					<textarea name="content" id="" cols="30" rows="10"></textarea>
+					<select name="category" id="">
+						@foreach($categories as $cat)
+							<option value="{{ $cat->id }}">{{ $cat->name }}</option>
+						@endforeach
+					</select>
 					<button class="btn btn-success"><i class="glyphicon glyphicon-send"></i> Guardar</button>
 				</div>
 			</form>
