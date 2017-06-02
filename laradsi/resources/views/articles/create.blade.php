@@ -22,7 +22,7 @@
 					</div>
 				@endforeach
 			@endif
-			<form action="{{ url('article') }}" method="POST">
+			<form action="{{ url('article') }}" method="POST" enctype="multipart/form-data">
 				{!! csrf_field() !!}
 				<div class="form-group">
 					<input type="text" name="name" class="form-control" placeholder="Nombre">

@@ -25,7 +25,7 @@
 				<td>{{ $article->name }}</td>
 				<td>{{ $article->content }}</td>
 				<td>{{ $article->image }}</td>
-				<td>{{ $article->category_id }}</td>
+				<td>{{ $article->category->name }}</td>
 
 			</tr>
 		</table>		

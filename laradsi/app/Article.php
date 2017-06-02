@@ -9,4 +9,9 @@ class Article extends Model
     protected $fillable = [
         'name', 'image', 'content', 'catergory_id',
     ];
+
+    public function category() {
+    	return $this->belongsTo('App\Category');
+    }
+
 }

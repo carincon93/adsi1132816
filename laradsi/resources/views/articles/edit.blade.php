@@ -12,7 +12,7 @@
 				<li class="active">Modificar Artículo</li>
 			</ul>
 			<hr>
-			<form action="{{ url('article/'.$art->id) }}" method="POST">
+			<form action="{{ url('article/'.$art->id) }}" method="POST" enctype="multipart/form-data">
 				{!! csrf_field() !!}
 				{{ method_field('put') }}
 				<div class="form-group">

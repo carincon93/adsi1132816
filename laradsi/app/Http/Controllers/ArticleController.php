@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Article;
 use App\Category;
 use App\Http\Requests\ArticleRequest;
+use App\Http\Controllers\Controller;
 
 class ArticleController extends Controller
 {
@@ -56,6 +57,7 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
+        // $categoryName  =$art->category->name;
         return view('articles.show', ['article' => Article::find($id)]);
     }
 
