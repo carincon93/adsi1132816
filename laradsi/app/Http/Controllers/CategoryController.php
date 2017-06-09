@@ -6,8 +6,13 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Http\Requests\CategoryRequest;
 
+
 class CategoryController extends Controller
 {
+    public function __construct() 
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -99,4 +104,5 @@ class CategoryController extends Controller
         Category::destroy($id);
         return redirect('category')->with('status', 'La categoría fue eliminada con éxtio!');
     }
+
 }

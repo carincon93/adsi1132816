@@ -24,7 +24,7 @@
 				<td>{{ $article->id }}</td>
 				<td>{{ $article->name }}</td>
 				<td>{{ $article->content }}</td>
-				<td>{{ $article->image }}</td>
+				<td><img src="{{ asset($article->image) }}" alt="" width="240px"></td>
 				<td>{{ $article->category->name }}</td>
 
 			</tr>

@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', 'ArticleController@listArticles');
 Route::resource('category', 'CategoryController');
 Route::resource('article', 'ArticleController');
 

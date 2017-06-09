@@ -7,8 +7,14 @@ use App\Category;
 use App\Http\Requests\ArticleRequest;
 use App\Http\Controllers\Controller;
 
+
 class ArticleController extends Controller
 {
+
+    public function __construct() 
+    {
+        $this->middleware('auth', ['except' => ['listArticles']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -39,11 +45,16 @@ class ArticleController extends Controller
      */
     public function store(ArticleRequest $request)
     {
-        $art = new Article;
+        if ($request->hasFile('image')) {
+            $file = time().'.'.$request->image->getClientOriginalExtension();
+            $request->image->move(public_path('images'), $file);
+        }
+        $art = new Article();
         $art->name = $request->get('name');
-        $art->image = $request->get('image');
+        $art->image = 'images/'.$file;
         $art->content = $request->get('content');
-        $art->category_id = $request->get('category');
+        $art->category_id = $request->get('category_id');
+
         if($art->save()) {
             return redirect('article')->with('status', 'La categoría '.$art->name.' fue adicionada con éxtio!');            
         }
@@ -85,9 +96,16 @@ class ArticleController extends Controller
     {
         $art = Article::find($id);
         $art->name = $request->get('name');
-        $art->image = $request->get('image');
+
+        if ($request->hasFile('image')) {
+            File::delete(public_path($art->image));
+            $file = time().'.'.$request->image->getClientOriginalExtension();
+            $request->image->move(public_path('images'), $file);
+            $art->image = 'images/'.$file;
+        }
+        
         $art->content = $request->get('content');
-        $art->category_id = $request->get('category');
+        $art->category_id = $request->get('category_id');
         if ($art->save()) {
             return redirect('article')->with('status', 'La categoría '.$art->name.' fue modificada con éxtio!');
         }
@@ -103,5 +121,11 @@ class ArticleController extends Controller
     {
         Article::destroy($id);
         return redirect('article')->with('status', 'El artículo fue eliminado con éxtio!');
+    }
+
+    public function listArticles()
+    {
+        $arts = Article::all();
+        return view('welcome')->with('arts', $arts);
     }
 }
