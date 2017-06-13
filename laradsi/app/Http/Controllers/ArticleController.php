@@ -22,6 +22,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
+        session(['section' => 'article']);
         $articles = Article::all();
         return view('articles.index')->with('articles', $articles);
     }
@@ -125,7 +126,7 @@ class ArticleController extends Controller
 
     public function listArticles()
     {
-        $arts = Article::all();
+        $arts = Article::orderBy('id', 'desc')->get();
         return view('welcome')->with('arts', $arts);
     }
 }

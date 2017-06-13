@@ -19,8 +19,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       @if(Auth::check())
         <ul class="nav navbar-nav navbar-left">
-          <li><a href="{{ url('article') }}">Artículos</a></li>
-          <li><a href="{{ url('category') }}">Categorías</a></li>
+          <li @if(session('section') == 'article')  class="active" @endif> <a href="{{ url('article') }}">Artículos</a></li>
+          <li @if(session('section') == 'category') class="active" @endif> <a href="{{ url('category') }}">Categorías</a></li>
         </ul>
       @endif
 

@@ -21,3 +21,8 @@ Route::resource('article', 'ArticleController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('login/{locale}', function ($locale) 
+{
+	App::setLocale($locale);
+	return view('auth.login');
+});

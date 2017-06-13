@@ -12,10 +12,10 @@
                     <ul class="list-group">
                         <li class="list-group-item">
                             <span class="badge">{{ $ccats }}</span>
-                            <a href="">Categorías</a></li>
+                            <a href="{{ url('category') }}">Categorías</a></li>
                         <li class="list-group-item">
                             <span class="badge">{{ $carts }}</span>
-                            <a href="">Artículos</a>
+                            <a href="{{ url('article') }}">Artículos</a>
                         </li>
                     </ul>
                 </div>

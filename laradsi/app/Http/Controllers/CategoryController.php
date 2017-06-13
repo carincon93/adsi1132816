@@ -20,6 +20,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
+        session(['section' => 'category']);
         $categories = Category::all();
         // dd($categories);
         //var_dump($categories);
