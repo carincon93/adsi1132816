@@ -28,6 +28,15 @@
 	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
   <script>
     $(document).ready(function() {
+
+      $('#name').keyup(function(event) {
+        $name = $(this).val();
+        $.get('article/search', {name: $name}, function(data) {
+          $('.table').html(data);
+        })
+      });
+
+
       $('form').on('click', '.btn-delete', function(event) {
         event.preventDefault();
         if (confirm("Realmente desea eliminar este elemento?")) {

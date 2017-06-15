@@ -14,9 +14,12 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::post('article/search', 'ArticleController@search');
 Route::get('/', 'ArticleController@listArticles');
-Route::resource('category', 'CategoryController');
 Route::resource('article', 'ArticleController');
+
+Route::resource('category', 'CategoryController');
 
 Auth::routes();
 

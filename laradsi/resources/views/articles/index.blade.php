@@ -17,6 +17,15 @@
 		<a class="btn btn-success" href="{{ url('article/create') }}">
 			<i class="glyphicon glyphicon-plus"></i>
 		</a>
+
+		<form action="{{ url('article/search') }}"  class="form-line">
+			<div class="form-group">
+			{!! csrf_field() !!}	
+			<input type="search" name="name" placeholder="Nombre Artículo Buscar" autocomplete="off" id="name">
+			<button type="submit" class="btn btn-info"><i class="glyphicon glyphicon-search"></i> Buscar</button>
+			</div>
+		</form>
+		
 		<table class="table table-stripped table-bordered table-hover">
 			<tr>
 				<th>Id</th>

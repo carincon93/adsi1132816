@@ -129,4 +129,10 @@ class ArticleController extends Controller
         $arts = Article::orderBy('id', 'desc')->get();
         return view('welcome')->with('arts', $arts);
     }
+
+    public function search(Request $request)
+    {        
+        $query = Article::name($request->get('name'))->orderBy('id', 'ASC');
+        return view('articles.ajax')->with('articles', $query);
+    }
 }

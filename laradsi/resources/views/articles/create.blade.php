@@ -13,6 +13,8 @@
 			</ul>
 			<hr>
 			@include('layout-app.errors')
+
+			
 			<form action="{{ url('article') }}" method="POST" enctype="multipart/form-data">
 				{!! csrf_field() !!}
 				<div class="form-group">
