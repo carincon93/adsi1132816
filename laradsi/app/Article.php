@@ -23,7 +23,7 @@ class Article extends Model
     public function scopeName($query, $name)
     {
         if (trim($name) != '') {
-            $query->where('name', 'LIKE', "%$name%")->orWhere('content', 'LIKE', "%$name%"); 
+            $query->where('name', 'LIKE', "%$name%"); 
         }
     }
 

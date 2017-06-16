@@ -5,19 +5,8 @@
 @section('content')
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">
-		<h1>Lista de Artículos</h1>
+		<h1>Busqueda Artículo</h1>
 		<hr>
-
-		@if(session('status'))
-			<div class="alert alert-success alert-dismissible" role="alert">
-			  	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			  	<p>{!! html_entity_decode(session('status')) !!}</p>
-			</div>
-		@endif
-		<a class="btn btn-success" href="{{ url('article/create') }}">
-			<i class="glyphicon glyphicon-plus"></i>
-			Adicionar Artículo
-		</a>
 
 		<form action="{{ url('article/search') }}" method="POST" class="form-line">
 			<div class="form-group">
@@ -36,15 +25,19 @@
 				</tr>				
 			</thead>
 			<tbody class="tbody">
-				@foreach($articles as $art)
+				@foreach($articles as $var)
 					<tr>
-						<td>{{ $art->id }}</td>
-						<td>{{ $art->name }}</td>
 						<td>
-							<a href="{{ url('article/'.$art->id) }}" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></a>
-							<a href="{{ url('article/'.$art->id.'/edit') }}" class="btn btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
+							{{ $var->id}}
+						</td>
+						<td>
+							{{ $var->name }}
+						</td>
+						<td>
+							<a href="{{ url('article/'.$var->id) }}" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></a>
+							<a href="{{ url('article/'.$var->id.'/edit') }}" class="btn btn-default"><i class="glyphicon glyphicon-pencil"></i></a>
 							{{-- <a href="{{ url('') }}" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a> --}}
-							<form action="{{ url('article/'.$art->id) }}" method="POST" style="display: inline-block;">
+							<form action="{{ url('article/'.$var->id) }}" method="POST" style="display: inline-block;">
 								{{ method_field('delete') }}
 								{!! csrf_field() !!}
 								<button class="btn btn-danger btn-delete"><i class="glyphicon glyphicon-trash"></i></button>

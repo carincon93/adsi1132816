@@ -57,7 +57,7 @@ class ArticleController extends Controller
         $art->category_id = $request->get('category_id');
 
         if($art->save()) {
-            return redirect('article')->with('status', 'La categoría '.$art->name.' fue adicionada con éxtio!');            
+            return redirect('article')->with('status', 'El artículo '.$art->name.' fue adicionado con éxtio!');            
         }
     }
 
@@ -108,7 +108,7 @@ class ArticleController extends Controller
         $art->content = $request->get('content');
         $art->category_id = $request->get('category_id');
         if ($art->save()) {
-            return redirect('article')->with('status', 'La categoría '.$art->name.' fue modificada con éxtio!');
+            return redirect('article')->with('status', 'El artículo '.$art->name.' fue modificado con éxtio!');
         }
     }
 
@@ -130,9 +130,9 @@ class ArticleController extends Controller
         return view('welcome')->with('arts', $arts);
     }
 
-    public function search(Request $request)
-    {        
-        $query = Article::name($request->get('name'))->orderBy('id', 'ASC');
+    public function ajaxsearch(Request $request) 
+    {
+        $query = Article::name($request->get('name'))->orderBy('id', 'ASC')->get();
         return view('articles.ajax')->with('articles', $query);
     }
 }
