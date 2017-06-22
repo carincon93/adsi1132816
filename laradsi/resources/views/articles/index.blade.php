@@ -18,6 +18,12 @@
 			<i class="glyphicon glyphicon-plus"></i>
 			Adicionar Artículo
 		</a>
+		<a href="{{ url('article/pdf') }}" class="btn btn-default">
+			<i class="glyphicon glyphicon-file"></i> Exportar PDF
+		</a>
+		<a href="{{ url('article/excel') }}" class="btn btn-default">
+			<i class="glyphicon glyphicon-file"></i> Exportar Excel
+		</a>
 
 		<form action="{{ url('article/search') }}" method="POST" class="form-line">
 			<div class="form-group">

@@ -18,6 +18,8 @@
 Route::get('/', 'ArticleController@listArticles');
 Route::post('ajaxsearch', 'ArticleController@ajaxsearch');
 Route::post('article/search', 'ArticleController@ajaxsearch');
+Route::get('article/pdf', 'ArticleController@pdf');
+Route::get('article/excel', 'ArticleController@excel');
 Route::resource('article', 'ArticleController');
 
 Route::resource('category', 'CategoryController');
