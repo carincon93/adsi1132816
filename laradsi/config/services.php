@@ -34,5 +34,16 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+    'google' => [
+        'client_id' => '873540216467-u3e8am0176bo6l743vickdb7sqpjrogh.apps.googleusercontent.com',
+        'client_secret' => '55Bdb6ozD_obIwxI0jYRuQE8',
+        'redirect' => 'http://127.0.0.1:8000/login/google/callback',
+    ],
+    'twitter' => [
+        'client_id' => 'hP7UFBDYCL4GmBYmQoDCZG42r',
+        'client_secret' => 'XnUoI06q9eFNSApgMLwdmuxyg4GKLjRKMJ6iuwRosXEhD4Bn2F',
+        'redirect' => 'http://127.0.0.1:8000/login/twitter/callback',
+    ],
+        
 
 ];

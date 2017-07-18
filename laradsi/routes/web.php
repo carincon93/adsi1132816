@@ -15,6 +15,9 @@
 //     return view('welcome');
 // });
 
+Route::get('login/google', 'GoogleController@redirectToProvider')->name('google.login');
+Route::get('login/google/callback', 'GoogleController@handleProviderCallback');
+
 Route::get('/', 'ArticleController@listArticles');
 Route::post('ajaxsearch', 'ArticleController@ajaxsearch');
 Route::post('article/search', 'ArticleController@ajaxsearch');
