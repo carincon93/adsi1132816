@@ -28,6 +28,11 @@ CREATE TABLE nombretabla (
 	id int AUTO_INCREMENT,
 	PRIMARY KEY (id)
 )
+#FOREIGN KEY
+CREATE TABLE nombretabla (
+	nombretabla_singular_id int,
+	FOREIGN KEY (nombretabla_singular_id) REFERENCES nombretablaprincipal(campollaveprimaria)
+)
 
 #Alterar la tabla (PRIMARY KEY)
 ALTER TABLE nombretabla ADD PRIMARY KEY(campo)
@@ -35,12 +40,6 @@ ALTER TABLE nombretabla ADD PRIMARY KEY(campo)
 #Alterar la tabla (Eliminar PRIMARY KEY)
 ALTER TABLE nombretabla DROP PRIMARY KEY
 
-#FOREIGN KEY
-CREATE TABLE nombretabla (
-	nombretabla_singular_id int,
-	FOREIGN KEY (nombretabla_singular_id) 
-	REFERENCES tablaprincipal.campollaveprimaria
-)
 #Alterar la tabla (FOREIGN KEY)
 ALTER TABLE nombretabla ADD FOREIGN KEY(nombretabla_singular_id) REFERENCES tablaprincipal.campollaveprimaria
 

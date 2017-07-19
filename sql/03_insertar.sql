@@ -8,4 +8,4 @@ INSERT INTO nombre_tabla (nombrecolumna1, nombrecolumna2) VALUES (valor1, valor2
 INSERT INTO nombre_tablacopia SELECT * FROM nombre_tablavieja;
 
 #Backup (Insertar una tabla en una nueva tabla en otra base de datos)
-INSERT INTO nombre_basedatoscopia.nombre_tablacopia SELECT * FROM nombre_basedatosvieja.nombre_tablavieja;
+INSERT INTO nombre_basedatosnueva.nombre_tablanueva SELECT * FROM nombre_basedatosvieja.nombre_tablavieja;

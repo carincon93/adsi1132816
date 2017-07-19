@@ -15,8 +15,8 @@
 //     return view('welcome');
 // });
 
-Route::get('login/google', 'GoogleController@redirectToProvider')->name('google.login');
-Route::get('login/google/callback', 'GoogleController@handleProviderCallback');
+Route::get('login/google', 'Auth\LoginController@redirectToGoogle');
+Route::get('login/google/callback', 'Auth\LoginController@handleGoogleCallback');
 
 Route::get('/', 'ArticleController@listArticles');
 Route::post('ajaxsearch', 'ArticleController@ajaxsearch');
@@ -30,7 +30,7 @@ Route::resource('category', 'CategoryController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('login/{locale}', function ($locale) 
+Route::get('login/{locale}', function ($locale)
 {
 	App::setLocale($locale);
 	return view('auth.login');

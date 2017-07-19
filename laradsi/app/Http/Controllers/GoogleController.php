@@ -11,7 +11,7 @@ class GoogleController extends Controller
      *
      * @return Response
      */
-    public function redirectToProvider()
+    public function redirectToGoogle()
     {
         return Socialite::driver('google')->redirect();
     }
@@ -21,10 +21,9 @@ class GoogleController extends Controller
      *
      * @return Response
      */
-    public function handleProviderCallback()
+    public function handleGoogleCallback()
     {
-        $user = Socialite::driver('google')->stateless()->user();
+        $user = Socialite::driver('google')->user();
         dd($user);
-        // $user->token;
     }
 }

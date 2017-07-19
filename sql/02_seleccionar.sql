@@ -14,7 +14,7 @@ SELECT DISTINCT nombrecolumna FROM nombretabla;
 SELECT * FROM nombretabla WHERE nombrecolumna = valor;
 
 #Seleccionar varios registros
-SELECT * FROM nombretabla WHERE nombrecolumna in (valor1, valor2);
+SELECT * FROM nombretabla WHERE nombrecolumna IN (valor1, valor2);
 
 #Seleccionar registros mayores o menores a un valor de un campo
 SELECT * FROM nombretabla WHERE nombrecolumna > valor;
@@ -46,16 +46,16 @@ SELECT * FROM nombretabla LIMIT numeroregistros OFFSET numeroinicia;
 SELECT * FROM nombretabla WHERE nombrecolumna LIKE "%cadena%";
 
 #Buscar al inicio
-SELECT * FROM nombretabla WHERE nombrecolumna LIKE "$cadena";
+SELECT * FROM nombretabla WHERE nombrecolumna LIKE "%cadena";
 
 #Buscar - Completando caracteres
-SELECT * FROM nombretabla WHERE nombrecolumna LIKE	"c_d_n";
+SELECT * FROM nombretabla WHERE nombrecolumna LIKE "c_d_n";
 
 #Buscar (Negación)
-SELECT * FROM nombretabla WHERE nombrecolumna NOT LIKE	"%cadena%";
+SELECT * FROM nombretabla WHERE nombrecolumna NOT LIKE "%cadena%";
 
 #Múltiples valores en una columna (IN)
-SELECT * FROM nombretabla WHERE nombrecolumna IN(valor1, valor2, valor3);
+SELECT * FROM nombretabla WHERE nombrecolumna IN (valor1, valor2, valor3);
 
 #Entre (Inicial - Final) (BETWEEN)
 SELECT * FROM nombretabla WHERE nombrecolumna BETWEEN valor1 AND valor2;
@@ -76,7 +76,7 @@ SELECT alias1.nombrecolumna, alias2.nombrecolumna FROM nombretabla AS alias1 LEF
 SELECT alias1.nombrecolumna, alias2.nombrecolumna FROM nombretabla AS alias1 RIGHT JOIN nombretabla2 AS alias2 ON alias2.nombrecolumna = alias1.nombrecolumna;
 
 #UNION (Unir la consulta de 2 o más tablas)
-SELECT nombrecolumna1 FROM nombretabla1 UNION SELECT nombrecolumna2 FROM nombretabla2;
+SELECT nombrecolumnatabla1 FROM nombretabla1 UNION SELECT nombrecolumnatabla2 FROM nombretabla2;
 
 
 
