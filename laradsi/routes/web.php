@@ -15,8 +15,12 @@
 //     return view('welcome');
 // });
 
-Route::get('login/google', 'Auth\LoginController@redirectToGoogle');
-Route::get('login/google/callback', 'Auth\LoginController@handleGoogleCallback');
+Route::get('login/google', 'GoogleController@redirectToGoogle');
+Route::get('login/google/callback', 'GoogleController@handleGoogleCallback');
+Route::get('login/twitter', 'TwitterController@redirectToTwitter');
+Route::get('login/twitter/callback', 'TwitterController@handleTwitterCallback');
+Route::get('login/facebook', 'FacebookController@redirectToFacebook');
+Route::get('login/facebook/callback', 'FacebookController@handleFacebookCallback');
 
 Route::get('/', 'ArticleController@listArticles');
 Route::post('ajaxsearch', 'ArticleController@ajaxsearch');

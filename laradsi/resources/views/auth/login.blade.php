@@ -33,6 +33,11 @@
                                 @lang('login.forgot')
                             </a>
                         </div>
+                        <div>
+                            <a href="{{ url('login/facebook') }}" class="">Facebook</a>
+                            <a href="{{ url('login/google') }}" class="">Google</a>
+                            <a href="{{ url('login/twitter') }}" class="">Twitter</a>
+                        </div>
                     </form>
                 </div>
             </div>

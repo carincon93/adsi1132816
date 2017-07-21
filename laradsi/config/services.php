@@ -42,8 +42,12 @@ return [
     'twitter' => [
         'client_id' => 'hP7UFBDYCL4GmBYmQoDCZG42r',
         'client_secret' => 'XnUoI06q9eFNSApgMLwdmuxyg4GKLjRKMJ6iuwRosXEhD4Bn2F',
-        'redirect' => 'http://127.0.0.1:8000/login/twitter/callback',
+        'redirect' => 'http://localhost:8000/login/twitter/callback',
     ],
-
+    'facebook' => [
+        'client_id' => '677580782436792',
+        'client_secret' => '0d544f0c8616cf9e66553214bcb46ec6',
+        'redirect' => 'http://localhost:8000/login/facebook/callback',
+    ],
 
 ];
